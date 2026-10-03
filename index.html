@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atlante delle scienze — Fisica, Astronomia, Chimica</title>
+    <meta
+      name="description"
+      content="Un atlante di storia e scienza: fisica, astronomia e chimica raccontate tra le scoperte del passato e la ricerca di oggi."
+    />
+
+    <link rel="canonical" href="https://atlante-delle-scienze.github.io/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Atlante delle scienze" />
+    <meta property="og:title" content="Atlante delle scienze — Fisica, Astronomia, Chimica" />
+    <meta property="og:description" content="Un atlante di storia e scienza: fisica, astronomia e chimica raccontate tra le scoperte del passato e la ricerca di oggi." />
+    <meta property="og:url" content="https://atlante-delle-scienze.github.io/" />
+    <meta property="og:image" content="https://atlante-delle-scienze.github.io/img_og/og-home.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Incisione di Flammarion: un viandante guarda oltre il bordo del cielo" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Atlante delle scienze — Fisica, Astronomia, Chimica" />
+    <meta name="twitter:description" content="Un atlante di storia e scienza: fisica, astronomia e chimica raccontate tra le scoperte del passato e la ricerca di oggi." />
+    <meta name="twitter:image" content="https://atlante-delle-scienze.github.io/img_og/og-home.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Atlante delle scienze",
+        "url": "https://atlante-delle-scienze.github.io/",
+        "inLanguage": "it",
+        "description": "Un atlante di storia e scienza: fisica, astronomia e chimica raccontate tra le scoperte del passato e la ricerca di oggi.",
+        "author": {
+          "@type": "Person",
+          "name": "Nicola Cusanelli",
+          "url": "https://nicolacusanelli.github.io/"
+        }
+      }
+    </script>
+    <meta name="author" content="Nicola Cusanelli" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Language" content="it" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============================================================
+   ATLANTE DELLE SCIENZE — foglio di stile condiviso del sito
+   Stessa identità visiva della pagina "Le macchie del Sole":
+   ottone/strumenti scientifici, inchiostro del cielo notturno,
+   pergamena, ombra ardente. Import in ogni pagina del sito.
+   ============================================================ */
+      :root {
+        --ink: #131f33;
+        --ink-2: #1c2c47;
+        --brass: #b08d4f;
+        --brass-light: #d9bc82;
+        --parchment: #f4ecd8;
+        --parchment-2: #ece0c4;
+        --paper-line: #d8c9a3;
+        --ember: #a8371b;
+        --ember-light: #c96a3f;
+        --charcoal: #2a2621;
+        --muted: #6f6552;
+        --muted-on-ink: #b9c2d6;
+        --sage: #5c7361;
+
+        --display: "Fraunces", Georgia, serif;
+        --body: "Source Serif 4", Georgia, serif;
+        --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+        --nav-h: 40px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--parchment);
+        color: var(--charcoal);
+        font-family: var(--body);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--display);
+        color: var(--ink);
+        margin: 0 0 0.4em;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      a {
+        color: var(--ember);
+      }
+      a:hover {
+        color: var(--ink);
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--ember-light);
+        outline-offset: 2px;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--brass);
+      }
+
+      /* ---------- SITE HEADER / NAV PRINCIPALE ---------- */
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: rgba(19, 31, 51, 0.97);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid rgba(217, 188, 130, 0.25);
+      }
+      .site-header-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--display);
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .site-logo svg {
+        width: 26px;
+        height: 26px;
+        flex: none;
+      }
+      .site-nav {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .site-nav a {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted-on-ink);
+        text-decoration: none;
+        padding: 8px 13px;
+        border-radius: 3px;
+      }
+      .site-nav a:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .site-nav a[aria-current="true"] {
+        color: var(--brass-light);
+        background: rgba(217, 188, 130, 0.12);
+      }
+      .site-nav a.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+
+      /* ---------- BREADCRUMB ---------- */
+      .breadcrumb {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.02em;
+        color: var(--muted);
+        padding: 18px 0 0;
+      }
+      .breadcrumb a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--paper-line);
+      }
+      .breadcrumb a:hover {
+        color: var(--ember);
+      }
+      .breadcrumb .sep {
+        margin: 0 8px;
+        color: var(--paper-line);
+      }
+      .breadcrumb .current {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      /* ---------- HERO (pagine indice) ---------- */
+      .page-hero {
+        padding: 40px 0 54px;
+        border-bottom: 1px solid var(--paper-line);
+      }
+      .page-hero .kicker {
+        margin-bottom: 0.9em;
+      }
+      .page-hero h1 {
+        font-size: clamp(1.9rem, 4vw, 2.7rem);
+        max-width: 16ch;
+      }
+      .page-hero p.lede {
+        max-width: 62ch;
+        font-size: 1.12rem;
+        color: var(--muted);
+        margin: 0;
+      }
+      .page-hero.on-ink {
+        background: var(--ink);
+        color: var(--muted-on-ink);
+      }
+      .page-hero.on-ink h1 {
+        color: #fff;
+      }
+
+      /* ---------- CARD DI NAVIGAZIONE (aree/sottoaree) ---------- */
+      .nav-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 22px;
+        margin: 44px 0;
+      }
+      .nav-card {
+        position: relative;
+        background: #fff;
+        border: 1px solid var(--paper-line);
+        padding: 26px 24px 24px;
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease,
+          border-color 0.15s ease;
+      }
+      .nav-card:hover {
+        /*transform: translateY(-3px);*/
+        box-shadow: 6px 8px 0 rgba(19, 31, 51, 0.08);
+        border-color: var(--brass);
+      }
+      .nav-card .icon {
+        width: 38px;
+        height: 38px;
+        color: var(--brass);
+      }
+      .nav-card h3 {
+        font-size: 1.22rem;
+        margin: 0;
+      }
+      .nav-card p {
+        font-size: 0.94rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.55;
+      }
+      .nav-card .status {
+        align-self: flex-start;
+        font-family: var(--mono);
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        padding: 4px 10px;
+        border-radius: 99px;
+      }
+      .status.ok {
+        background: rgba(92, 115, 97, 0.14);
+        color: var(--sage);
+      }
+      .status.soon {
+        background: rgba(111, 101, 82, 0.12);
+        color: var(--muted);
+      }
+      .nav-card.is-disabled {
+        cursor: default;
+        opacity: 0.72;
+      }
+      .nav-card.is-disabled:hover {
+        transform: none;
+        box-shadow: none;
+        border-color: var(--paper-line);
+      }
+      .nav-card .goto {
+        margin-top: auto;
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        color: var(--ember);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-card .goto svg {
+        width: 12px;
+        height: 12px;
+      }
+
+      /* ---------- SEZIONI GENERALI ---------- */
+      .section-band {
+        padding: 54px 0;
+      }
+      .section-band + .section-band {
+        border-top: 1px solid var(--paper-line);
+      }
+      .band-alt {
+        background: var(--parchment-2);
+      }
+      .prose {
+        max-width: 70ch;
+      }
+      .prose p {
+        margin: 0 0 1.1em;
+      }
+
+      /* ---------- LISTE DI CONTENUTI (biografie / divulgazione) ---------- */
+      .entry-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 30px;
+        border-top: 1px solid var(--paper-line);
+      }
+      .entry {
+        display: grid;
+        grid-template-columns: 120px 1fr auto;
+        gap: 22px;
+        align-items: center;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--paper-line);
+        text-decoration: none;
+        color: inherit;
+      }
+      .entry:hover .entry-title {
+        color: var(--ember);
+      }
+      .entry-thumb {
+        width: 120px;
+        height: 120px;
+        background: var(--parchment-2);
+        border: 1px solid var(--paper-line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--brass);
+        overflow: hidden;
+      }
+      .entry-thumb svg {
+        width: 44px;
+        height: 44px;
+      }
+      .entry-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .entry-body .eyebrow {
+        margin-bottom: 0.4em;
+        display: block;
+      }
+      .entry-title {
+        font-family: var(--display);
+        font-size: 1.28rem;
+        color: var(--ink);
+        margin: 0 0 0.3em;
+      }
+      .entry-body p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--muted);
+        max-width: 60ch;
+      }
+      .entry-cta {
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        color: var(--ember);
+        white-space: nowrap;
+      }
+      .entry.is-placeholder {
+        opacity: 0.62;
+        cursor: default;
+      }
+      .entry.is-placeholder .entry-cta {
+        color: var(--muted);
+      }
+      @media (max-width: 640px) {
+        .entry {
+          grid-template-columns: 64px 1fr;
+          grid-template-areas: "thumb title" "thumb body" ". cta";
+        }
+        .entry-thumb {
+          width: 64px;
+          height: 64px;
+        }
+        .entry-thumb svg {
+          width: 26px;
+          height: 26px;
+        }
+        .entry-cta {
+          justify-self: start;
+        }
+      }
+
+      /* ---------- CALLOUT / NOTA ---------- */
+      .callout {
+        background: #fff;
+        border: 1px solid var(--paper-line);
+        border-left: 5px solid var(--brass);
+        padding: 20px 22px;
+        max-width: 640px;
+        margin: 36px 0;
+      }
+      .callout h4 {
+        font-family: var(--display);
+        font-size: 1.05rem;
+        margin: 0 0 0.5em;
+        color: var(--ink);
+      }
+      .callout p {
+        margin: 0;
+        font-size: 0.94rem;
+      }
+
+      /* ---------- FOOTER ---------- */
+      .site-footer {
+        background: var(--ink);
+        color: var(--muted-on-ink);
+        padding: 26px 0 18px;
+        margin-top: 20px;
+      }
+      .site-footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+      .site-footer p {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+      .site-footer a {
+        color: var(--brass-light);
+      }
+
+      @media (max-width: 720px) {
+        .site-header-inner {
+          height: auto;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 12px 24px;
+        }
+        .site-nav {
+          width: 100%;
+          overflow-x: auto;
+        }
+      }
+    </style>
+
+    <style>
+      .home-hero {
+        position: relative;
+        overflow: hidden;
+        background:
+          radial-gradient(
+            ellipse at 50% 120%,
+            rgba(176, 141, 79, 0.16),
+            transparent 60%
+          ),
+          linear-gradient(
+            180deg,
+            var(--ink) 0%,
+            var(--ink-2) 70%,
+            var(--ink) 100%
+          );
+        color: #fff;
+        padding: 32px 24px 50px;
+        text-align: center;
+      }
+      .home-hero h1 {
+        color: #fff;
+        font-size: clamp(2.1rem, 4.8vw, 3.3rem);
+        max-width: 18ch;
+        margin: 0 auto 0.4em;
+      }
+
+      /* AGGIUNGI QUESTO */
+      .hero-subtitle {
+        margin: 0 auto 1.8rem;
+        font-size: 1.75rem;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.92);
+      }
+      /* FINE */
+
+      .home-hero p.lede {
+        color: var(--muted-on-ink);
+        max-width: 68ch;
+        margin: 0 auto;
+        font-size: 1.14rem;
+        line-height: 1.75;
+        text-align: center;
+      }
+      .hero-subtitle {
+        margin: 0.2rem auto 2rem;
+        font-size: 1.75rem;
+        font-style: italic;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.92);
+      }
+
+      .home-nav-grid {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <div class="site-logo">
+          <svg
+            viewBox="0 0 24 24"
+            width="26"
+            height="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <circle cx="12" cy="12" r="3.2" />
+            <ellipse
+              cx="12"
+              cy="12"
+              rx="10"
+              ry="4"
+              transform="rotate(28 12 12)"
+            />
+            <ellipse
+              cx="12"
+              cy="12"
+              rx="10"
+              ry="4"
+              transform="rotate(-28 12 12)"
+            />
+          </svg>
+          Atlante delle scienze
+        </div>
+
+        <nav class="site-nav" aria-label="Aree tematiche">
+          <a href="fisica/physics.html" target="_blank">Fisica</a>
+          <a href="astronomia/astronomy.html" target="_blank">Astronomia</a>
+          <a href="chimica/chemistry.html" target="_blank">Chimica</a>
+
+          <!-- 
+          <a href="meteorology.html" class="disabled" aria-disabled="true"
+            >Meteorology</a
+          >
+        --></nav>
+      </div>
+    </header>
+
+    <header class="home-hero">
+      <p class="eyebrow" style="color: var(--brass-light)">
+        Storia · Scienza · Divulgazione
+      </p>
+      <h1>Atlante delle scienze</h1>
+      <p class="hero-subtitle">Tra scoperte, idee e storia</p>
+      <p class="lede">
+        Un percorso attraverso le idee, le osservazioni e le scoperte che hanno
+        trasformato, nei secoli, il nostro modo di comprendere il mondo.
+      </p>
+    </header>
+
+    <main class="wrap home-nav-grid">
+      <div class="nav-grid" style="margin-top: 48px">
+        <a class="nav-card" href="fisica/physics.html" target="_blank">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="38"
+            height="38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <circle cx="12" cy="12" r="2.4" />
+            <ellipse cx="12" cy="12" rx="10" ry="4.2" />
+            <ellipse
+              cx="12"
+              cy="12"
+              rx="10"
+              ry="4.2"
+              transform="rotate(60 12 12)"
+            />
+            <ellipse
+              cx="12"
+              cy="12"
+              rx="10"
+              ry="4.2"
+              transform="rotate(120 12 12)"
+            />
+          </svg>
+          <!--
+          <span class="status soon">In arrivo</span>
+        -->
+          <h3>FISICA</h3>
+          <p style="text-align: justify">
+            Dalle leggi del moto alla relatività generale e alla meccanica
+            quantistica: idee, osservazioni, misure, esperimenti e modelli
+            attraverso i quali abbiamo imparato a comprendere la natura.
+          </p>
+        </a>
+
+        <a class="nav-card" href="astronomia/astronomy.html" target="_blank">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="38"
+            height="38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <circle cx="10" cy="12" r="6" />
+            <path d="M4 9c2 3 10 3 12 0M4 15c2-3 10-3 12 0" />
+          </svg>
+          <!--
+          <span class="status ok">Disponibile</span>
+        -->
+          <h3>ASTRONOMIA</h3>
+          <p style="text-align: justify">
+            Dalle prime osservazioni del cielo ai telescopi spaziali:
+            osservazioni, strumenti, protagonisti e scoperte che hanno ampliato
+            la nostra conoscenza dell'universo.
+          </p>
+        </a>
+
+        <a class="nav-card" href="chimica/chemistry.html" target="_blank">
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="38"
+            height="38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <path
+              d="M9 3h6M10 3v6l-5.5 9.5A1.5 1.5 0 0 0 5.8 21h12.4a1.5 1.5 0 0 0 1.3-2.5L14 9V3"
+            />
+            <path d="M7.5 15h9" />
+          </svg>
+          <!--
+          <span class="status ok">Disponibile</span>
+        -->
+          <h3>CHIMICA</h3>
+          <p style="text-align: justify">
+            Dall'alchimia alla tavola periodica: esperimenti, trasformazioni
+            della materia e protagonisti che hanno contribuito a costruire la
+            chimica moderna.
+          </p>
+        </a>
+        <!--
+        <a
+          class="nav-card is-disabled"
+          href="meteorology.html"
+          aria-disabled="true"
+          onclick="return false;"
+        >
+          <svg
+            class="icon"
+            viewBox="0 0 24 24"
+            width="38"
+            height="38"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <path
+              d="M7 16a4 4 0 1 1 1.2-7.8A5 5 0 0 1 18 10a3.5 3.5 0 0 1-1 6.9H7z"
+            />
+            <path d="M9 20l-1 2M13 20l-1 2M17 20l-1 2" />
+          </svg>
+          <span class="status soon">In arrivo</span>
+          <h3>Meteorology</h3>
+          <p>
+            Dalla previsione empirica ai modelli numerici: la scienza che legge
+            il cielo di ogni giorno.
+          </p>
+        </a>
+      --></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          &copy; <span id="anno"></span> Nicola Cusanelli — Atlante delle
+          scienze &nbsp;·&nbsp;
+          <a
+            href="https://creativecommons.org/licenses/by-nc/4.0/deed.it"
+            target="_blank"
+            rel="noopener"
+            >CC BY-NC 4.0</a
+          >
+        </p>
+
+        <p>
+          <a
+            href="https://nicolacusanelli.github.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Nicola Cusanelli · Home page
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("anno").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
