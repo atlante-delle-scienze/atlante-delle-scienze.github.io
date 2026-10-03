@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chimici e protagonisti — Atlante delle scienze</title>
+    <meta
+      name="description"
+      content="Biografie dei protagonisti della chimica: chi ha isolato gli elementi e riscritto le regole della materia."
+    />
+
+    <link rel="canonical" href="https://atlante-delle-scienze.github.io/chimica/chemistry-biography.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Atlante delle scienze" />
+    <meta property="og:title" content="Chimici e protagonisti — Atlante delle scienze" />
+    <meta property="og:description" content="Biografie dei protagonisti della chimica: chi ha isolato gli elementi e riscritto le regole della materia." />
+    <meta property="og:url" content="https://atlante-delle-scienze.github.io/chimica/chemistry-biography.html" />
+    <meta property="og:image" content="https://atlante-delle-scienze.github.io/img_og/og-chimica.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ritratto di Martin Heinrich Klaproth" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Chimici e protagonisti — Atlante delle scienze" />
+    <meta name="twitter:description" content="Biografie dei protagonisti della chimica: chi ha isolato gli elementi e riscritto le regole della materia." />
+    <meta name="twitter:image" content="https://atlante-delle-scienze.github.io/img_og/og-chimica.jpg" />
+    <meta name="author" content="Nicola Cusanelli" />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Language" content="it" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #131f33;
+        --ink-2: #1c2c47;
+        --brass: #b08d4f;
+        --brass-light: #d9bc82;
+        --parchment: #f4ecd8;
+        --parchment-2: #ece0c4;
+        --paper-line: #d8c9a3;
+        --ember: #a8371b;
+        --ember-light: #c96a3f;
+        --charcoal: #2a2621;
+        --muted: #6f6552;
+        --muted-on-ink: #b9c2d6;
+        --sage: #5c7361;
+        --display: "Fraunces", Georgia, serif;
+        --body: "Source Serif 4", Georgia, serif;
+        --mono: "IBM Plex Mono", ui-monospace, monospace;
+        --nav-h: 64px;
+        --verdigris: #3f7266;
+        --verdigris-light: #7fa89b;
+        --copper: #b5651d;
+        --copper-light: #dd9552;
+        --glass: #eef4f0;
+        --glass-2: #dfeae3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--parchment);
+        color: var(--charcoal);
+        font-family: var(--body);
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: var(--display);
+        color: var(--ink);
+        margin: 0 0 0.4em;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+      a {
+        color: var(--ember);
+      }
+      a:hover {
+        color: var(--ink);
+      }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 3px solid var(--ember-light);
+        outline-offset: 2px;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .eyebrow {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--brass);
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 60;
+        background: rgba(19, 31, 51, 0.97);
+        backdrop-filter: blur(6px);
+        border-bottom: 1px solid rgba(217, 188, 130, 0.25);
+      }
+      .site-header-inner {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 24px;
+        height: var(--nav-h);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--display);
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+      }
+      .site-logo:hover {
+        color: #fff;
+      }
+      .site-logo svg {
+        width: 26px;
+        height: 26px;
+        flex: none;
+      }
+      .site-nav {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .site-nav a {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted-on-ink);
+        text-decoration: none;
+        padding: 8px 13px;
+        border-radius: 3px;
+      }
+      .site-nav a:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.06);
+      }
+      .site-nav a[aria-current="true"] {
+        color: var(--copper-light);
+        background: rgba(221, 149, 82, 0.14);
+      }
+      .site-nav a.disabled {
+        opacity: 0.4;
+        pointer-events: none;
+      }
+      .breadcrumb {
+        font-family: var(--mono);
+        font-size: 0.76rem;
+        letter-spacing: 0.02em;
+        color: var(--muted);
+        padding: 18px 0 0;
+      }
+      .breadcrumb a {
+        color: var(--muted);
+        text-decoration: none;
+        border-bottom: 1px dotted var(--paper-line);
+      }
+      .breadcrumb a:hover {
+        color: var(--copper);
+      }
+      .breadcrumb .sep {
+        margin: 0 8px;
+        color: var(--paper-line);
+      }
+      .breadcrumb .current {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .page-hero {
+        padding: 40px 0 44px;
+        border-bottom: 1px solid var(--paper-line);
+        background: linear-gradient(
+          180deg,
+          var(--glass) 0%,
+          var(--parchment) 100%
+        );
+      }
+      .page-hero h1 {
+        font-size: clamp(1.9rem, 4vw, 2.5rem);
+        max-width: 20ch;
+      }
+      .page-hero p.lede {
+        max-width: 62ch;
+        font-size: 1.1rem;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .page-hero-centered {
+        text-align: center;
+      }
+      .page-hero-centered h1 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .entry-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 30px;
+        border-top: 1px solid var(--paper-line);
+      }
+
+      main {
+        min-height: 52vh;
+      }
+
+      .entry {
+        display: grid;
+        grid-template-columns: 120px 1fr auto;
+        gap: 22px;
+        align-items: center;
+        padding: 22px 0;
+        border-bottom: 1px solid var(--paper-line);
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .entry:hover .entry-title {
+        color: var(--ink);
+      }
+
+      .entry-cta a:hover {
+        text-decoration: underline;
+      }
+      .entry-thumb {
+        width: 120px;
+        height: 120px;
+        background: var(--glass);
+        border: 1px solid var(--paper-line);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--verdigris);
+        overflow: hidden;
+      }
+      .entry-thumb svg {
+        width: 44px;
+        height: 44px;
+      }
+      .entry-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .entry-body .eyebrow {
+        margin-bottom: 0.4em;
+        display: block;
+      }
+      .entry-title {
+        font-family: var(--display);
+        font-size: 1.28rem;
+        color: var(--ink);
+        margin: 0 0 0.3em;
+      }
+      .entry-body p {
+        margin: 0;
+        font-size: 0.95rem;
+        color: var(--muted);
+        max-width: 60ch;
+      }
+
+      .entry-cta {
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        color: var(--copper);
+        white-space: nowrap;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .entry-cta a {
+        color: var(--copper);
+        text-decoration: none;
+      }
+
+      .entry-cta a:hover {
+        text-decoration: underline;
+      }
+
+      .language-status {
+        color: var(--muted);
+      }
+
+      .entry.is-placeholder {
+        opacity: 0.6;
+        cursor: default;
+      }
+      .entry.is-placeholder .entry-cta {
+        color: var(--muted);
+      }
+      @media (max-width: 640px) {
+        .entry {
+          grid-template-columns: 64px 1fr;
+          grid-template-areas: "thumb title" "thumb body" ". cta";
+        }
+        .entry-thumb {
+          width: 64px;
+          height: 64px;
+        }
+        .entry-thumb svg {
+          width: 26px;
+          height: 26px;
+        }
+        .entry-cta {
+          justify-self: start;
+        }
+      }
+
+      .callout {
+        background: #fff;
+        border: 1px solid var(--paper-line);
+        border-left: 5px solid var(--verdigris);
+        padding: 20px 22px;
+        max-width: 640px;
+        margin: 36px 0;
+      }
+      .callout h4 {
+        font-family: var(--display);
+        font-size: 1.05rem;
+        margin: 0 0 0.5em;
+        color: var(--ink);
+      }
+      .callout p {
+        margin: 0;
+        font-size: 0.94rem;
+      }
+
+      .site-footer {
+        background: var(--ink);
+        color: var(--muted-on-ink);
+        padding: 40px 0 26px;
+        margin-top: 20px;
+      }
+      .site-footer .wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+      .site-footer p {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+      .site-footer a {
+        color: var(--copper-light);
+      }
+
+      @media (max-width: 720px) {
+        .site-header-inner {
+          height: auto;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 12px 24px;
+        }
+        .site-nav {
+          width: 100%;
+          overflow-x: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="site-logo" href="../index.html">
+          <svg
+            viewBox="0 0 24 24"
+            width="26"
+            height="26"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.4"
+          >
+            <circle cx="12" cy="12" r="3.2" />
+            <ellipse
+              cx="12"
+              cy="12"
+              rx="10"
+              ry="4"
+              transform="rotate(28 12 12)"
+            />
+            <ellipse
+              cx="12"
+              cy="12"
+              rx="10"
+              ry="4"
+              transform="rotate(-28 12 12)"
+            />
+          </svg>
+          Atlante delle scienze
+        </a>
+
+        <nav class="site-nav" aria-label="Aree tematiche">
+          <a href="../fisica/physics.html">Fisica</a>
+          <a href="../astronomia/astronomy.html">Astronomia</a>
+          <a href="../chimica/chemistry.html" aria-current="true">Chimica</a>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="breadcrumb wrap" aria-label="Percorso">
+      <a href="../index.html">Home</a><span class="sep">/</span>
+      <a href="../chimica/chemistry.html">Chimica</a><span class="sep">/</span>
+      <span class="current">Biografie</span>
+    </nav>
+
+    <header class="page-hero wrap page-hero-centered">
+      <h1>I protagonisti della chimica</h1>
+    </header>
+
+    <main class="wrap">
+      <!-- ============================================================
+       ELENCO BIOGRAFIE
+       Per aggiungere una nuova voce, duplica un blocco <a class="entry">.
+       Ho collegato Klaproth assumendo che il file si chiami
+       "klaproth.html" e stia accanto a questa pagina: correggi il
+       percorso se il nome reale è diverso.
+       ============================================================ -->
+      <div class="entry-list">
+        <div class="entry">
+          <span class="entry-thumb">
+            <img
+              src="img-klaproth/Klaproth-1.jpg"
+              alt="Ritratto di Martin Heinrich Klaproth"
+              width="848"
+              height="1108"
+              decoding="async"
+            />
+          </span>
+
+          <span class="entry-body">
+            <span class="eyebrow"
+              >Chimica analitica · scoperta degli elementi</span
+            >
+            <span class="entry-title">Martin Heinrich Klaproth</span>
+            <p>
+              L'uomo che cercava nuovi elementi nella materia e trasformò
+              l'analisi chimica in una scienza rigorosa.
+            </p>
+          </span>
+
+          <span class="entry-cta">
+            <a href="klaproth.html" target="_blank" rel="noopener">
+              🇬🇧 <strong>English version</strong>
+            </a>
+            <span class="language-status">
+              🇮🇹 Versione italiana in preparazione
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <!--
+      <div class="callout">
+        <h4>Nota per l'aggiornamento</h4>
+        <p>
+          Ho collegato la voce Klaproth alla pagina <code>klaproth.html</code>:
+          se il tuo file ha un nome diverso o si trova in un'altra cartella,
+          correggi l'attributo <code>href</code> di quella voce.
+        </p>
+      </div>
+    --></main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          &copy; <span id="anno"></span> Nicola Cusanelli — Atlante delle
+          scienze &nbsp;·&nbsp;
+          <a
+            href="https://creativecommons.org/licenses/by-nc/4.0/deed.it"
+            target="_blank"
+            rel="noopener"
+            >CC BY-NC 4.0</a
+          >
+        </p>
+
+        <p>
+          <a
+            href="https://nicolacusanelli.github.io/"
+            target="_blank"
+            rel="noopener"
+          >
+            Nicola Cusanelli · Home page
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("anno").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
