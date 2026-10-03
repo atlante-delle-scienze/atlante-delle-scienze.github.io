@@ -1,0 +1,3541 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Misurare il mondo — Dal meridiano terrestre alle costanti della natura
+    </title>
+    <meta
+      name="description"
+      content="Una storia di scienza, società e potere: dal corpo umano al meridiano terrestre, dal metro campione alla velocità della luce."
+    />
+
+    <link rel="canonical" href="https://atlante-delle-scienze.github.io/fisica/misurare-il-mondo.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Atlante delle scienze" />
+    <meta property="og:title" content="Misurare il mondo — Dal meridiano terrestre alle costanti della natura" />
+    <meta property="og:description" content="Una storia di scienza, società e potere: dal corpo umano al meridiano terrestre, dal metro campione alla velocità della luce." />
+    <meta property="og:url" content="https://atlante-delle-scienze.github.io/fisica/misurare-il-mondo.html" />
+    <meta property="og:image" content="https://atlante-delle-scienze.github.io/img_og/og-fisica.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Campioni metrici storici conservati al Rijksmuseum" />
+    <meta property="og:locale" content="it_IT" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Misurare il mondo — Dal meridiano terrestre alle costanti della natura" />
+    <meta name="twitter:description" content="Una storia di scienza, società e potere: dal corpo umano al meridiano terrestre, dal metro campione alla velocità della luce." />
+    <meta name="twitter:image" content="https://atlante-delle-scienze.github.io/img_og/og-fisica.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Misurare il mondo — Dal meridiano terrestre alle costanti della natura",
+        "description": "Una storia di scienza, società e potere: dal corpo umano al meridiano terrestre, dal metro campione alla velocità della luce.",
+        "image": "https://atlante-delle-scienze.github.io/img_og/og-fisica.jpg",
+        "inLanguage": "it",
+        "author": {
+          "@type": "Person",
+          "name": "Nicola Cusanelli",
+          "url": "https://nicolacusanelli.github.io/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Atlante delle scienze"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://atlante-delle-scienze.github.io/fisica/misurare-il-mondo.html"
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ============ TOKENS ============ */
+      :root {
+        --paper: #f4efe1;
+        --paper-deep: #eae1c9;
+        --paper-line: #d8cbaa;
+        --ink: #292217;
+        --ink-soft: #5c5140;
+        --ink-faint: #8a7d65;
+        --verdigris: #0f8a7c;
+        --verdigris-deep: #0a5850;
+        --verdigris-pale: #dcede9;
+        --brass: #a8742e;
+        --brass-deep: #7c551f;
+        --brass-pale: #f1e3c7;
+        --rust: #a24a2e;
+        --rust-pale: #f3e0d6;
+        --paper-shadow: 0 1px 0 rgba(41, 34, 23, 0.06);
+        --serif-display: "Fraunces", "Iowan Old Style", serif;
+        --serif-body: "Source Serif 4", Georgia, serif;
+        --mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+        --measure: 40rem;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        * {
+          animation-duration: 0.001ms !important;
+          transition-duration: 0.001ms !important;
+        }
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--serif-body);
+        font-size: 1.09rem;
+        line-height: 1.68;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      ::selection {
+        background: var(--verdigris-pale);
+        color: var(--verdigris-deep);
+      }
+
+      /* subtle paper grain */
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background-image:
+          radial-gradient(
+            circle at 20% 30%,
+            rgba(41, 34, 23, 0.02) 0,
+            transparent 45%
+          ),
+          radial-gradient(
+            circle at 80% 70%,
+            rgba(41, 34, 23, 0.025) 0,
+            transparent 50%
+          );
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--serif-display);
+        color: var(--ink);
+        font-weight: 600;
+        letter-spacing: -0.01em;
+      }
+
+      a {
+        color: var(--verdigris-deep);
+      }
+      a:hover {
+        color: var(--rust);
+      }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible {
+        outline: 2px solid var(--verdigris);
+        outline-offset: 3px;
+      }
+
+      p {
+        margin: 0 0 1.15em;
+      }
+
+      /* ============ LAYOUT SHELL ============ */
+      .site {
+        position: relative;
+        z-index: 1;
+        max-width: 52rem;
+        margin: 0 auto;
+        padding: 0 1.5rem 6rem;
+      }
+
+      /* ============ TOP PROGRESS BAR (mobile) ============ */
+      .progress-rail {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: var(--paper-line);
+        z-index: 60;
+      }
+      .progress-rail__fill {
+        height: 100%;
+        width: 0%;
+        background: var(--verdigris);
+        transition: width 0.08s linear;
+      }
+      @media (min-width: 1080px) {
+        .progress-rail {
+          display: none;
+        }
+      }
+
+      /* ============ MERIDIAN RULER (desktop signature element) ============ */
+      .ruler {
+        position: fixed;
+        left: 28px;
+        top: 8vh;
+        height: 84vh;
+        width: 46px;
+        z-index: 40;
+        display: none;
+      }
+      @media (min-width: 1080px) {
+        .ruler {
+          display: block;
+        }
+      }
+      .ruler__line {
+        position: absolute;
+        left: 23px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: var(--paper-line);
+      }
+      .ruler__fill {
+        position: absolute;
+        left: 23px;
+        top: 0;
+        width: 1px;
+        height: 0%;
+        background: var(--verdigris);
+        transition: height 0.25s ease-out;
+      }
+      .ruler__tick {
+        position: absolute;
+        left: 0;
+        width: 46px;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .ruler__tick .stub {
+        width: 12px;
+        height: 1px;
+        background: var(--ink-faint);
+        flex: 0 0 auto;
+      }
+      .ruler__tick .yr {
+        font-family: var(--mono);
+        font-size: 0.66rem;
+        color: var(--ink-faint);
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+      }
+      .ruler__tick.is-active .stub {
+        background: var(--verdigris);
+        width: 18px;
+      }
+      .ruler__tick.is-active .yr {
+        color: var(--verdigris-deep);
+        font-weight: 600;
+      }
+      .ruler__tick.is-active {
+      }
+      .ruler__cap {
+        position: absolute;
+        left: 19px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: var(--paper);
+        border: 1.5px solid var(--ink-faint);
+      }
+      .ruler__cap.top {
+        top: -5px;
+      }
+      .ruler__cap.bottom {
+        bottom: -5px;
+        border-color: var(--ink-faint);
+      }
+
+      /* ============ HERO ============ */
+      .hero {
+        padding: 5.5rem 0 3rem;
+        position: relative;
+      }
+      .hero__eyebrow {
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--verdigris-deep);
+        display: flex;
+        align-items: center;
+        gap: 0.6em;
+        margin-bottom: 1.6rem;
+      }
+      .hero__eyebrow::before {
+        content: "";
+        width: 28px;
+        height: 1px;
+        background: var(--brass);
+      }
+      .hero h1 {
+        font-size: clamp(2.3rem, 5.4vw, 3.6rem);
+        line-height: 1.06;
+        margin: 0 0 0.5rem;
+      }
+      .hero h1 em {
+        font-style: italic;
+        font-weight: 500;
+        color: var(--verdigris-deep);
+      }
+      .hero__subtitle {
+        font-family: var(--serif-display);
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.3rem;
+        color: var(--ink-soft);
+        margin: 1.1rem 0 0;
+        max-width: 34rem;
+      }
+      .hero__meta {
+        margin-top: 2.6rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        font-family: var(--mono);
+        font-size: 0.74rem;
+        color: var(--ink-faint);
+        letter-spacing: 0.02em;
+        border-top: 1px solid var(--paper-line);
+        padding-top: 1.1rem;
+      }
+
+      /* ============ SECTIONS ============ */
+      .chapter {
+        padding: 3.4rem 0;
+        border-top: 1px solid var(--paper-line);
+      }
+      .chapter:first-of-type {
+        border-top: none;
+      }
+      .chapter__eyebrow {
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.7rem;
+      }
+      .chapter h2 {
+        font-size: clamp(1.5rem, 3vw, 1.9rem);
+        margin: 0 0 1.3rem;
+        line-height: 1.2;
+      }
+      .chapter h2 .num {
+        font-family: var(--mono);
+        font-weight: 500;
+        color: var(--verdigris);
+        font-size: 0.6em;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+      }
+      .chapter .lede {
+        font-size: 1.14rem;
+        color: var(--ink-soft);
+      }
+      .chapter p + h3 {
+        margin-top: 2rem;
+      }
+
+      .intro {
+        padding-top: 0;
+      }
+      .intro p:first-of-type::first-letter {
+        font-family: var(--serif-display);
+        font-size: 3.6rem;
+        font-weight: 600;
+        float: left;
+        line-height: 0.82;
+        padding: 0.06em 0.09em 0 0;
+        color: var(--verdigris-deep);
+      }
+
+      /* ============ FIGURES ============ */
+      figure.plate {
+        margin: 2.2rem 0;
+      }
+      figure.plate .frame {
+        position: relative;
+        background: var(--paper-deep);
+        border: 1px solid var(--paper-line);
+        box-shadow: var(--paper-shadow);
+        min-height: 220px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+      figure.plate img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      figure.plate.is-missing img {
+        display: none;
+      }
+      .plate-fallback {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 2.4rem 1.5rem;
+        text-align: center;
+        color: var(--ink-faint);
+      }
+      figure.plate.is-missing .plate-fallback {
+        display: flex;
+      }
+      .plate-fallback__glyph {
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--ink-faint);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--serif-display);
+        font-style: italic;
+        font-size: 1.1rem;
+      }
+      .plate-fallback__path {
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        background: var(--paper);
+        border: 1px solid var(--paper-line);
+        padding: 0.25rem 0.6rem;
+        color: var(--brass-deep);
+      }
+      .plate-fallback__hint {
+        font-size: 0.82rem;
+        max-width: 22rem;
+      }
+      figcaption {
+        margin-top: 0.8rem;
+        font-size: 0.92rem;
+        color: var(--ink-soft);
+        line-height: 1.5;
+      }
+      figcaption .credit {
+        display: block;
+        margin-top: 0.35rem;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        color: var(--ink-faint);
+        letter-spacing: 0.01em;
+      }
+      figure.plate--pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+      }
+      figure.plate--pair .frame {
+        min-height: 150px;
+      }
+      figure.plate--quad {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+      }
+      figure.plate--quad .frame {
+        min-height: 140px;
+      }
+      figure.plate--quad figcaption,
+      figure.plate--pair figcaption {
+        grid-column: 1 / -1;
+      }
+
+      figure.diagram {
+        margin: 2.2rem 0;
+        background: var(--paper-deep);
+        border: 1px solid var(--paper-line);
+        padding: 1.1rem 1rem 0.9rem;
+      }
+      figure.diagram svg {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      figure.diagram figcaption {
+        padding: 0 0.2rem;
+      }
+
+      /* ============ BOXES ============ */
+      .box {
+        margin: 2.4rem 0;
+        background: var(--brass-pale);
+        border: 1px solid var(--paper-line);
+        border-left: 4px solid var(--brass);
+        padding: 1.6rem 1.7rem 1.5rem;
+      }
+      .box__tag {
+        font-family: var(--mono);
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--brass-deep);
+        margin-bottom: 0.5rem;
+      }
+      .box h3 {
+        font-size: 1.15rem;
+        margin: 0 0 0.9rem;
+        color: var(--brass-deep);
+      }
+      .box p:last-child {
+        margin-bottom: 0;
+      }
+
+      .box--incident {
+        background: var(--rust-pale);
+        border-left-color: var(--rust);
+      }
+      .box--incident .box__tag {
+        color: var(--rust);
+      }
+      .box--incident h3 {
+        color: var(--rust);
+      }
+
+      .box--formula {
+        background: var(--verdigris-pale);
+        border-left-color: var(--verdigris);
+      }
+      .box--formula .box__tag {
+        color: var(--verdigris-deep);
+      }
+      .box--formula h3 {
+        color: var(--verdigris-deep);
+      }
+
+      .equation {
+        font-family: var(--mono);
+        font-size: 1.15rem;
+        background: var(--paper);
+        border: 1px solid var(--paper-line);
+        padding: 0.9rem 1.1rem;
+        margin: 1rem 0;
+        text-align: center;
+        color: var(--verdigris-deep);
+        overflow-x: auto;
+      }
+
+      /* seven-constants list inside box */
+      .constants {
+        list-style: none;
+        margin: 1.2rem 0 0;
+        padding: 0;
+        display: grid;
+        gap: 0.9rem;
+      }
+      .constants li {
+        padding: 0.85rem 1rem;
+        background: var(--paper);
+        border: 1px solid var(--paper-line);
+      }
+      .constants strong {
+        display: block;
+        font-family: var(--serif-display);
+        color: var(--verdigris-deep);
+        font-size: 1.02rem;
+        margin-bottom: 0.25rem;
+      }
+      .constants .val {
+        font-family: var(--mono);
+        font-size: 0.92rem;
+        color: var(--ink);
+        display: block;
+        margin-top: 0.4rem;
+      }
+
+      /* ============ TABLE ============ */
+      .table-wrap {
+        overflow-x: auto;
+        margin: 1.6rem 0;
+      }
+      table.units {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.98rem;
+      }
+      table.units caption {
+        text-align: left;
+        font-family: var(--mono);
+        font-size: 0.72rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-faint);
+        margin-bottom: 0.6rem;
+      }
+      table.units th {
+        text-align: left;
+        font-family: var(--serif-display);
+        font-weight: 600;
+        color: var(--verdigris-deep);
+        border-bottom: 2px solid var(--verdigris);
+        padding: 0.6rem 0.8rem;
+      }
+      table.units td {
+        padding: 0.6rem 0.8rem;
+        border-bottom: 1px solid var(--paper-line);
+      }
+      table.units td.sym {
+        font-family: var(--mono);
+        color: var(--brass-deep);
+      }
+      table.units tr:hover td {
+        background: var(--paper-deep);
+      }
+
+      /* ============ TIMELINE MARKER (inline, ties to ruler) ============ */
+      .era {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        font-family: var(--mono);
+        font-size: 0.85rem;
+        color: var(--verdigris-deep);
+        background: var(--verdigris-pale);
+        padding: 0.15rem 0.6rem;
+        margin-bottom: 0.9rem;
+      }
+
+      /* ============ GLOSSARY ============ */
+      dl.glossary {
+        margin: 0;
+      }
+      dl.glossary dt {
+        font-family: var(--serif-display);
+        font-weight: 600;
+        color: var(--verdigris-deep);
+        font-size: 1.05rem;
+        margin-top: 1.4rem;
+      }
+      dl.glossary dd {
+        margin: 0.3rem 0 0;
+        color: var(--ink-soft);
+        text-align: justify;
+      }
+
+      /* ============ APPENDIX / DETAILS ============ */
+      details.appendix {
+        margin: 1.6rem 0;
+        border: 1px solid var(--paper-line);
+        background: var(--paper-deep);
+      }
+      details.appendix summary {
+        cursor: pointer;
+        list-style: none;
+        padding: 1rem 1.3rem;
+        font-family: var(--serif-display);
+        font-weight: 600;
+        font-size: 1.05rem;
+        color: var(--ink);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      details.appendix summary::-webkit-details-marker {
+        display: none;
+      }
+      details.appendix summary::after {
+        content: "+";
+        font-family: var(--mono);
+        font-size: 1.2rem;
+        color: var(--verdigris);
+      }
+      details.appendix[open] summary::after {
+        content: "–";
+      }
+      details.appendix .inner {
+        padding: 0 1.3rem 1.4rem;
+      }
+      details.appendix ol {
+        padding-left: 1.2rem;
+      }
+      details.appendix li {
+        margin-bottom: 0.9rem;
+      }
+      .credit-entry {
+        margin-bottom: 1.6rem;
+        padding-bottom: 1.4rem;
+        border-bottom: 1px dashed var(--paper-line);
+      }
+      .credit-entry:last-child {
+        border-bottom: none;
+      }
+      .credit-entry h4 {
+        font-family: var(--serif-display);
+        font-size: 1rem;
+        margin: 0 0 0.5rem;
+        color: var(--brass-deep);
+      }
+      .credit-entry dl {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+      .credit-entry dt {
+        font-weight: 600;
+        color: var(--ink-soft);
+        float: left;
+        clear: left;
+        width: 9.5rem;
+      }
+      .credit-entry dd {
+        margin: 0 0 0.35rem 9.5rem;
+      }
+
+      /* ============ FOOTER ============ */
+      .footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid var(--paper-line);
+        font-family: var(--mono);
+        font-size: 0.78rem;
+        color: var(--ink-faint);
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      /* ============ small helpers ============ */
+      .small-caps {
+        font-variant: small-caps;
+      }
+      em {
+        font-style: italic;
+      }
+      .pull {
+        font-family: var(--serif-display);
+        font-style: italic;
+        font-size: 1.3rem;
+        color: var(--verdigris-deep);
+        border-left: 3px solid var(--verdigris);
+        padding-left: 1.2rem;
+        margin: 2rem 0;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          padding-top: 3.5rem;
+        }
+        .box {
+          padding: 1.2rem 1.1rem 1.1rem;
+        }
+        figure.plate--pair,
+        figure.plate--quad {
+          grid-template-columns: 1fr;
+        }
+        .credit-entry dt {
+          float: none;
+          width: auto;
+        }
+        .credit-entry dd {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress-rail">
+      <div class="progress-rail__fill" id="progressFill"></div>
+    </div>
+
+    <nav class="ruler" aria-hidden="true">
+      <div class="ruler__line"></div>
+      <div class="ruler__fill" id="rulerFill"></div>
+      <span class="ruler__cap top"></span>
+      <span class="ruler__cap bottom"></span>
+      <div class="ruler__tick" data-year="1789" style="top: 6%">
+        <span class="stub"></span><span class="yr">1789</span>
+      </div>
+      <div class="ruler__tick" data-year="1799" style="top: 24%">
+        <span class="stub"></span><span class="yr">1799</span>
+      </div>
+      <div class="ruler__tick" data-year="1889" style="top: 48%">
+        <span class="stub"></span><span class="yr">1889</span>
+      </div>
+      <div class="ruler__tick" data-year="1960" style="top: 66%">
+        <span class="stub"></span><span class="yr">1960</span>
+      </div>
+      <div class="ruler__tick" data-year="1983" style="top: 80%">
+        <span class="stub"></span><span class="yr">1983</span>
+      </div>
+      <div class="ruler__tick" data-year="2019" style="top: 94%">
+        <span class="stub"></span><span class="yr">2019</span>
+      </div>
+    </nav>
+
+    <div class="site">
+      <header class="hero">
+        <p class="hero__eyebrow">Storia della metrologia</p>
+        <h1>
+          Misurare il mondo:<br /><em
+            >dal meridiano terrestre alle costanti della natura</em
+          >
+        </h1>
+        <p class="hero__subtitle">Una storia di scienza, società e potere.</p>
+        <div class="hero__meta">
+          <span>7 unità fondamentali</span>
+          <span>230 anni di storia</span>
+          <span>dal corpo umano alla velocità della luce</span>
+        </div>
+
+        <figure class="plate" style="margin-top: 2.8rem">
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Poids_et_mesures_1929-2.jpg"
+              alt="Tavola Poids et mesures, 1929"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="1280"
+              height="1000"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/Poids_et_mesures_1929.jpg</span
+              >
+              <span class="plate-fallback__hint"
+                >Immagine da inserire: copia il file con questo nome esatto
+                nella cartella “img”.</span
+              >
+            </div>
+          </div>
+          <figcaption>
+            <em
+              >Poids et mesures. Tableau dressé conformément à la loi du 11
+              juillet et au décret du 28 juillet 1903</em
+            >
+            (<em
+              >Pesi e misure. Tavola redatta conformemente alla legge dell'11
+              luglio e al decreto del 28 luglio 1903</em
+            >), 1929.
+            <span class="credit">
+              Éditions Forest, 1929 · BnF / Gallica · riprodotta via Wikimedia
+              Commons · Pubblico dominio
+            </span>
+          </figcaption>
+        </figure>
+      </header>
+
+      <!-- ================= INTRO ================= -->
+      <section class="chapter intro">
+        <p style="text-align: justify">
+          La storia della civiltà umana è anche la storia della misura,
+          attraverso cui l'uomo ha imparato a descrivere e confrontare
+          quantitativamente il mondo che lo circonda. Molto prima della nascita
+          della scienza moderna e della scrittura, gli esseri umani avevano già
+          sviluppato forme elementari di confronto e quantificazione necessarie
+          alla vita quotidiana.
+        </p>
+        <p style="text-align: justify">
+          Tuttavia, senza la possibilità di effettuare misure affidabili,
+          sarebbe stato molto più difficile costruire ponti, tracciare strade,
+          innalzare templi, progettare acquedotti o organizzare gli scambi
+          commerciali tra popoli diversi. Ogni civiltà, dalle più antiche fino
+          ai giorni nostri, ha dovuto affrontare problemi simili: come stabilire
+          con precisione l'estensione di un terreno, quanto dovesse essere
+          grande una casa o quanta acqua servisse per irrigare un campo? E
+          ancora: quale quantità di grano doveva essere consegnata come tributo
+          o scambiata al mercato?
+        </p>
+        <p style="text-align: justify">
+          In tutti questi casi era necessario confrontare una grandezza con un
+          riferimento comune. Da questa esigenza si svilupparono
+          progressivamente sistemi di misura e, con essi, unità sempre più
+          definite e condivise. Ma per arrivare ai moderni sistemi di misura
+          sarebbero dovuti passare molti secoli.
+        </p>
+      </section>
+
+      <!-- ================= 1 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 1</p>
+        <h2>La misura come processo di astrazione</h2>
+        <p style="text-align: justify">
+          Misurare è un'attività intellettuale tutt'altro che semplice.
+          Significa astrarre, tra le molte caratteristiche di un oggetto, quella
+          che si vuole misurare e confrontare oggetti qualitativamente diversi
+          sulla base di quella sola grandezza.
+        </p>
+        <p style="text-align: justify">
+          Per esempio un passo, un tratto di strada, un pezzo di tessuto e
+          l'altezza di un albero sono oggetti completamente diversi; eppure, se
+          scegliamo la lunghezza come grandezza da considerare, possiamo
+          metterli in relazione tra loro, confrontarli e stabilire quale sia
+          maggiore o minore. È questa capacità di astrarre una proprietà e di
+          esprimerla quantitativamente che rende possibile la misura.
+        </p>
+        <p style="text-align: justify">
+          In questa prospettiva, la storia della misura è anche la storia di
+          come l'uomo abbia progressivamente imparato a separare la grandezza
+          dall'oggetto che la possiede, cercando di definirla e confrontarla in
+          modo sempre più stabile, riproducibile e universale.
+        </p>
+      </section>
+
+      <!-- ================= 2 ================= -->
+      <section class="chapter" data-year="—">
+        <p class="chapter__eyebrow">Capitolo 2</p>
+        <h2>Il corpo come primo strumento di misura</h2>
+        <p style="text-align: justify">
+          Per misurare il mondo che lo circonda, l'uomo ricorre a ciò che ha di
+          più immediatamente disponibile: il proprio corpo. Il piede, il palmo,
+          il dito, il braccio e il passo erano riferimenti immediati, sempre
+          disponibili e facilmente riconoscibili. Con essi era possibile
+          confrontare la lunghezza di un oggetto, l'estensione di un terreno o
+          la distanza tra due luoghi. Queste prime misure erano profondamente
+          legate all'esperienza quotidiana. Il corpo diventava così il primo
+          strumento attraverso cui l'uomo cercava di dare ordine quantitativo
+          allo spazio che lo circondava.
+        </p>
+
+        <p style="text-align: justify">
+          Ma proprio la loro origine ne rivelava anche il limite. Il piede di
+          una persona non era necessariamente uguale a quello di un'altra, così
+          come un passo poteva variare da individuo a individuo. E quando
+          comunità diverse utilizzavano riferimenti differenti, confrontare le
+          loro misure diventava difficile. La necessità di misurare non era
+          quindi sufficiente: occorreva anche fare in modo che una misura
+          potesse essere riconosciuta e utilizzata da più persone. Con il tempo,
+          le diverse unità cominciarono a essere organizzate in sistemi nei
+          quali i loro rapporti fossero definiti e le grandezze potessero essere
+          confrontate e trasformate più facilmente. Il corpo rimaneva il punto
+          di partenza, ma la misura cominciava lentamente a diventare qualcosa
+          di più: non soltanto un riferimento concreto, ma un sistema condiviso
+          di relazioni.
+        </p>
+
+        <figure
+          class="plate"
+          style="max-width: 420px; margin-left: auto; margin-right: auto"
+        >
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Uomo_Vitruviano-2.jpg"
+              alt="Uomo Vitruviano, Leonardo da Vinci"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="960"
+              height="1330"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path">img/Uomo_Vitruviano.jpg</span>
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+          <figcaption>
+            <em>Uomo Vitruviano</em>, Leonardo da Vinci, ca. 1490–1492.
+            <span class="credit">
+              Gallerie dell'Accademia, Venezia · riprodotta via Wikimedia
+              Commons · Pubblico dominio
+            </span>
+          </figcaption>
+        </figure>
+
+        <div class="box">
+          <h3>Leonardo e le proporzioni del corpo umano</h3>
+          <p style="text-align: justify">
+            <em>L'Uomo Vitruviano</em> di Leonardo da Vinci rappresenta uno dei
+            simboli più celebri della cultura rinascimentale. Il disegno studia
+            le proporzioni del corpo umano attraverso la geometria, riprendendo
+            le indicazioni dell'architetto romano Vitruvio. Il corpo diventa
+            così un riferimento per descrivere e confrontare dimensioni e
+            rapporti geometrici: una rappresentazione particolarmente
+            significativa per la storia della misura e per il modo in cui, nella
+            cultura rinascimentale, il corpo umano poteva essere assunto come
+            riferimento per descrivere proporzioni e dimensioni.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 3 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 3</p>
+        <h2>La lunga strada verso una misura universale</h2>
+        <p style="text-align: justify">
+          Le misure legate al corpo umano furono per lungo tempo strumenti
+          sufficientemente efficaci per molte esigenze pratiche. Permisero di
+          misurare terreni, costruire abitazioni, progettare imbarcazioni e
+          realizzare manufatti sempre più complessi. La misura divenne
+          progressivamente uno strumento essenziale non soltanto per soddisfare
+          le necessità quotidiane, ma anche per trasformare un'idea in un'opera
+          concreta.
+        </p>
+        <p style="text-align: justify">
+          La storia dell'architettura offre numerosi esempi di come lunghezze,
+          rapporti e proporzioni siano diventati parte integrante della
+          progettazione. Le grandi architetture del passato, dalle costruzioni
+          monumentali dell'antichità alle chiese romaniche e gotiche, mostrano
+          quanto la capacità di stabilire e confrontare grandezze fosse
+          importante nel lavoro umano. Ma proprio ciò che rendeva queste misure
+          così immediate ne costituiva anche il limite principale: esse
+          rimanevano legate al corpo umano e alle tradizioni della comunità che
+          le utilizzava. Un piede, un palmo o un passo potevano avere lunghezze
+          diverse da una persona all'altra e, soprattutto, potevano assumere
+          valori differenti da una comunità all'altra.
+        </p>
+        <p style="text-align: justify">
+          Il problema non era quindi più soltanto riuscire a misurare, ma fare
+          in modo che una misura avesse lo stesso significato per persone
+          diverse e potesse essere riconosciuta e utilizzata all'interno di una
+          comunità. La misura doveva diventare sufficientemente stabile,
+          riconoscibile e condivisa.
+        </p>
+      </section>
+
+      <!-- ================= 4 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 4</p>
+        <h2>Le misure come attributo di potere</h2>
+        <p style="text-align: justify">
+          Ma chi decide quanto vale una misura? Per gran parte della storia,
+          stabilire quanto valeva una misura significava anche definire
+          riferimenti comuni per il commercio, la divisione dei raccolti, la
+          riscossione delle imposte e l'amministrazione delle terre. Chi aveva
+          il diritto di fissare le unità di misura e di controllarne l'uso
+          possedeva, di conseguenza, anche una forma concreta di autorità. In
+          diverse epoche e società, autorità centrali e locali cercarono di
+          controllare le unità, i pesi e i campioni utilizzati nei commerci e
+          nella riscossione dei tributi. Stabilire una misura significava
+          infatti stabilire una regola comune alla quale gli altri dovevano
+          attenersi.
+        </p>
+        <p style="text-align: justify">
+          In un mondo caratterizzato dalla presenza di numerose misure locali,
+          la stessa denominazione poteva indicare quantità differenti in luoghi
+          diversi. Una merce poteva quindi essere acquistata, venduta o tassata
+          secondo criteri diversi a seconda del luogo in cui avveniva lo
+          scambio. La misura diventava così una questione di fiducia, ma anche
+          di conflitto e di interesse economico. Il problema era particolarmente
+          importante per chi disponeva di minori possibilità di controllare il
+          risultato della misurazione. Quando il valore di una misura non era
+          condiviso o facilmente verificabile, il rapporto tra chi la stabiliva
+          o la controllava e chi doveva accettarla poteva diventare anche un
+          rapporto di potere.
+        </p>
+
+        <figure
+          class="plate"
+          style="max-width: 620px; margin-left: auto; margin-right: auto"
+        >
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Palazzo_Ragione_Padova-2.jpg"
+              alt="Unità di misura del Palazzo della Ragione, Padova"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="1280"
+              height="960"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/Palazzo_Ragione_Padova.jpg</span
+              >
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+          <figcaption style="text-align: justify">
+            <em>Unità di misura del Palazzo della Ragione, Padova</em>. Da
+            sinistra a destra: il "copo", una tegola per misurare la farina; la
+            "staro", per misurare le granaglie; il "quarelo", per misurare i
+            mattoni; il "brazzo" o "brazzolaro" (braccio), per misurare la
+            stoffa.
+            <span class="credit"
+              >Fabrizio Pivari, 27 maggio 2012 · CC BY‑SA 3.0</span
+            >
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ================= 5 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 5</p>
+        <h2>Un mondo in espansione</h2>
+        <p style="text-align: justify">
+          Con l'intensificarsi dei commerci e dei viaggi, già a partire dal XVI
+          secolo, popolazioni sempre più lontane entrarono in contatto tra loro.
+          Sorse così un problema nuovo: fare in modo che una misura conservasse
+          lo stesso significato anche al di là dei confini della comunità che la
+          utilizzava. Misurare non era più sufficiente, ma era necessario poter
+          confrontare le misure e riconoscere in esse un riferimento comune.
+        </p>
+        <p style="text-align: justify">
+          Questa esigenza spinse, nel corso del tempo, a cercare riferimenti più
+          stabili. Il riferimento cominciò progressivamente a svincolarsi dal
+          corpo umano: in diverse società si costruirono campioni materiali, si
+          stabilirono rapporti tra le diverse unità e si organizzarono le misure
+          all'interno di sistemi sempre più strutturati. Il riferimento non era
+          più soltanto qualcosa che apparteneva all'uomo, ma diventava qualcosa
+          che poteva essere conservato, confrontato e condiviso. La misura
+          cominciava così a liberarsi, almeno in parte, dalla variabilità
+          dell'esperienza individuale.
+        </p>
+      </section>
+
+      <!-- ================= 6 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 6</p>
+        <h2>Un cambio di paradigma</h2>
+        <p style="text-align: justify">
+          Le misure erano tuttavia ancora profondamente legate all'esperienza
+          quotidiana e alle attività concrete. Per un agricoltore, per esempio,
+          una misura del terreno poteva essere associata alla quantità di lavoro
+          necessaria per coltivarlo o alla quantità di seme necessaria per
+          seminarlo. Una misura completamente astratta da queste caratteristiche
+          poteva quindi apparire meno significativa di quella tradizionale, che
+          la comunità conosceva e utilizzava da generazioni.
+        </p>
+        <p style="text-align: justify">
+          L'introduzione di sistemi di misura universali richiese perciò
+          qualcosa di più della semplice sostituzione di un'unità con un'altra,
+          perché implicava una trasformazione del modo stesso di concepire la
+          misura. Si trattava di passare progressivamente da una molteplicità di
+          riferimenti legati ai luoghi, alle attività e alle tradizioni locali
+          verso sistemi nei quali le grandezze potessero essere definite
+          attraverso riferimenti comuni e confrontabili.
+        </p>
+      </section>
+
+      <!-- ================= 7 ================= -->
+      <section class="chapter" data-year="1789">
+        <p class="chapter__eyebrow">Capitolo 7</p>
+        <h2>La nascita di una nuova idea di misura</h2>
+        <p style="text-align: justify">
+          Perché questa trasformazione potesse compiersi su scala universale
+          sarebbe stato necessario un nuovo clima culturale e politico, quello
+          dell'Illuminismo e, in seguito, della Rivoluzione francese. Nel clima
+          della Rivoluzione, il problema delle misure non era più soltanto
+          quello di trovare unità pratiche, ma assumeva anche un significato
+          politico e culturale più profondo: se gli uomini dovevano essere
+          uguali davanti alla legge, potevano continuare a misurare secondo
+          regole diverse?
+        </p>
+        <p style="text-align: justify">
+          La domanda conduceva direttamente a un problema ancora più radicale:
+          se la misura doveva essere uguale per tutti, su che cosa avrebbe
+          dovuto fondarsi? Non più sul corpo di un uomo, né sulla tradizione di
+          una città o sull'autorità di un sovrano. Si delineava così l'idea di
+          un sistema di misura concepito, secondo l'ideale illuministico, come
+          uno strumento comune e universale.
+        </p>
+        <p style="text-align: justify">
+          La nascita del Sistema metrico si inserì quindi non soltanto in una
+          riforma tecnica, ma anche in una profonda trasformazione politica,
+          economica e culturale. La ricerca di un linguaggio comune delle misure
+          si inseriva così nella costruzione di una nuova idea di società, nella
+          quale le regole della misurazione potessero essere sottratte alla
+          frammentazione dei privilegi e dei poteri locali.
+        </p>
+
+        <figure
+          class="plate"
+          style="max-width: 620px; margin-left: auto; margin-right: auto"
+        >
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Declaration_of_the_Rights_1789-2.jpg"
+              alt="Dichiarazione dei diritti dell'uomo e del cittadino, 1789"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="960"
+              height="1217"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/Declaration_of_the_Rights_1789.jpg</span
+              >
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+          <figcaption style="text-align: justify">
+            <em>Dichiarazione dei diritti dell'uomo e del cittadino</em>, ca.
+            1789. Dipinto di Jean-Jacques-François Le Barbier che rappresenta la
+            Dichiarazione dei diritti dell'uomo e del cittadino del 1789,
+            simbolo della nuova idea di uguaglianza e universalità affermatasi
+            durante la Rivoluzione francese.
+            <span class="credit"
+              >Jean-Jacques-François Le Barbier, ca. 1789 · Pubblico
+              dominio</span
+            >
+          </figcaption>
+        </figure>
+
+        <div class="box">
+          <h3><em>"Per tutti i tempi, per tutti i popoli"</em></h3>
+          <p style="text-align: justify">
+            Tra la fine del XVIII secolo e gli anni della Rivoluzione francese
+            prende forma il Sistema metrico decimale, fondato su criteri
+            universali, indipendenti dal corpo umano e dalle tradizioni locali.
+            Il passaggio dalla molteplicità delle misure locali a un sistema
+            universale si compie attraverso alcune tappe fondamentali. Il punto
+            di partenza è la notte del <em>4 agosto 1789</em>, quando
+            l'Assemblea Nazionale Costituente abolisce i privilegi feudali,
+            creando anche le condizioni politiche per superare la frammentazione
+            dei pesi e delle misure legata ai privilegi locali. Poche settimane
+            dopo, il <em>26 agosto 1789</em>, viene proclamata la Dichiarazione
+            dei diritti dell'uomo e del cittadino. L'ideale di uguaglianza
+            affermato nella Dichiarazione rendeva sempre più difficile
+            conciliare una società fondata sull'uguaglianza dei cittadini con
+            una realtà nella quale pesi e misure potevano ancora variare da un
+            luogo all'altro. Il progetto comincia quindi a tradursi in decisioni
+            concrete. L'<em>8 maggio 1790</em> viene approvato il decreto che
+            avvia la creazione di un sistema di misure uniforme e universale,
+            destinato a essere fondato su riferimenti naturali e non
+            sull'arbitrio di un sovrano. Un passaggio decisivo arriva il
+            <em>1° agosto 1793</em>, quando la Convenzione adotta ufficialmente
+            il sistema metrico decimale.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 8 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 8</p>
+        <h2>La grande misura del meridiano</h2>
+        <p style="text-align: justify">
+          Nel 1790, l'Assemblea Nazionale francese incaricò l'Accademia delle
+          Scienze di elaborare le basi di un nuovo sistema universale di pesi e
+          misure. Si cercava un riferimento che non dipendesse dall'uomo, dalle
+          tradizioni locali o dall'autorità di un sovrano, ma che fosse ricavato
+          dalla natura stessa. La scelta cadde sulla Terra: si propose di
+          definire il metro come la diecimilionesima parte della distanza tra il
+          Polo Nord e l'Equatore, misurata lungo il meridiano di Parigi.
+        </p>
+        <p style="text-align: justify">
+          Per determinare con la necessaria precisione la lunghezza del
+          meridiano, era necessario misurare con grande accuratezza un suo
+          tratto e ricostruire geometricamente il resto attraverso una rete di
+          triangoli. Nel 1792 due astronomi francesi, Jean‑Baptiste Delambre e
+          Pierre Méchain, partirono per un'impresa che avrebbe dovuto fornire
+          alla nuova unità di misura il suo fondamento naturale. Il compito era
+          apparentemente semplice: misurare con la massima precisione possibile
+          un tratto del meridiano di Parigi compreso tra Dunkerque, nel nord
+          della Francia, e Barcellona, in Spagna. Da quella misura sarebbe stato
+          possibile ricavare la lunghezza dell'intero quarto di meridiano
+          terrestre e, quindi, il nuovo metro.
+        </p>
+
+        <figure class="plate plate--quad">
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Base_IV.JPEG"
+              alt="Tavola IV, triangolazione Delambre e Méchain"
+              loading="lazy"
+              onerror="this.closest('.frame').classList.add('is-missing')"
+              width="1024"
+              height="1482"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__path">img/Base_IV.JPEG</span>
+            </div>
+          </div>
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Base_VI.JPEG"
+              alt="Tavola VI, triangolazione Delambre e Méchain"
+              loading="lazy"
+              onerror="this.closest('.frame').classList.add('is-missing')"
+              width="1024"
+              height="1482"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__path">img/Base_VI.JPEG</span>
+            </div>
+          </div>
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Base_VII.JPEG"
+              alt="Tavola VII, triangolazione Delambre e Méchain"
+              loading="lazy"
+              onerror="this.closest('.frame').classList.add('is-missing')"
+              width="1024"
+              height="1482"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__path">img/Base_VII.JPEG</span>
+            </div>
+          </div>
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Base_VIII.JPEG"
+              alt="Tavola VIII, triangolazione Delambre e Méchain"
+              loading="lazy"
+              onerror="this.closest('.frame').classList.add('is-missing')"
+              width="1024"
+              height="1482"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__path">img/Base_VIII.JPEG</span>
+            </div>
+          </div>
+          <figcaption style="text-align: justify">
+            Tavole IV, VI, VII e VIII della
+            <em>Base du système métrique décimal</em>, redatta da Jean‑Baptiste
+            Delambre e Pierre Méchain, che documentano la rete di triangolazione
+            utilizzata nella misura dell'arco del meridiano tra Dunkerque e
+            Barcellona.
+            <span class="credit"
+              >BnF, Gallica, ARK bpt6k110604s · Pubblico dominio</span
+            >
+          </figcaption>
+        </figure>
+
+        <div class="box">
+          <h3>
+            Come si misura una distanza che non si può misurare direttamente?
+          </h3>
+          <p style="text-align: justify">
+            La distanza tra Dunkerque e Barcellona era di centinaia di
+            chilometri. Come si poteva determinarla con la necessaria
+            precisione? La soluzione era affidarsi alla geometria, attraverso un
+            metodo chiamato
+            <em>triangolazione</em>. L'idea è tanto semplice quanto potente: si
+            misurano con grande cura alcune distanze, dette <em>basi</em>, e si
+            utilizzano queste lunghezze per costruire una rete di triangoli.
+            Partendo da una base, si individuano punti elevati e visibili dai
+            suoi estremi; misurando con precisione gli angoli e conoscendo la
+            lunghezza della base, la trigonometria permette di calcolare gli
+            altri lati. Uno dei lati così determinati può diventare a sua volta
+            la base di un nuovo triangolo, e così via: la misura si propaga di
+            triangolo in triangolo, senza mai dover percorrere per intero la
+            distanza da determinare. Per costruire questa rete sul terreno,
+            Delambre e Méchain dovevano individuare campanili, torri, colline e
+            montagne abbastanza elevati da essere visibili gli uni dagli altri
+            anche a grandi distanze, e da quei punti misurare gli angoli con
+            strumenti di precisione. In questo modo l'intero tratto di meridiano
+            tra Dunkerque e Barcellona diventava una gigantesca costruzione
+            geometrica: una lunga catena di triangoli concatenati, dalla quale
+            era possibile ricavare la lunghezza dell'arco di meridiano cercato
+            e, da questa, la lunghezza del metro.
+          </p>
+        </div>
+
+        <figure
+          class="plate"
+          style="max-width: 780px; margin-left: auto; margin-right: auto"
+        >
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/catena_tre_triangoli_didascalia_sx.svg"
+              alt="Catena di triangolazioni utilizzata per estendere una misurazione geodetica"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/catena_tre_triangoli_colori_fix.svg</span
+              >
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+
+          <figcaption style="text-align: justify">
+            <strong>Catena di triangolazioni.</strong> La distanza viene estesa
+            progressivamente attraverso una successione di triangoli, senza
+            dover misurare direttamente ogni tratto sul terreno.
+            <strong>Triangolo 1 (A-B-C):</strong> la base A-B è l'unico segmento
+            misurato direttamente sul terreno; gli angoli <em>α</em> e
+            <em>β</em>, osservati ai suoi estremi, permettono di calcolare il
+            lato B-C. <strong>Triangolo 2 (B-C-D):</strong> il lato B-C, appena
+            determinato, diventa la nuova base; gli angoli <em>γ</em> e
+            <em>δ</em>, misurati ai suoi estremi, permettono di ricavare C-D.
+            <strong>Triangolo 3 (C-D-E):</strong> allo stesso modo, C-D diventa
+            la nuova base e gli angoli <em>ε</em> e <em>ζ</em> permettono di
+            determinare D-E. La freccia tratteggiata indica che la catena può
+            proseguire per molti altri triangoli, estendendo la misura per
+            centinaia di chilometri. In questo modo, una sola base misurata
+            direttamente con grande precisione può essere trasferita
+            progressivamente lungo l'intero percorso, purché gli angoli siano
+            misurati con incertezze sufficientemente piccole.
+          </figcaption>
+        </figure>
+
+        <p class="pull">
+          Quello che doveva essere un lavoro relativamente rapido si trasformò
+          in un'impresa durata sette anni.
+        </p>
+
+        <p style="text-align: justify">
+          La Rivoluzione francese sconvolgeva il paese, l'Europa era in guerra e
+          i due astronomi e i loro collaboratori dovevano operare in un clima
+          politico tutt'altro che favorevole agli spostamenti e alle attività
+          scientifiche. L'operazione geodetica era inoltre estremamente
+          complessa e richiedeva osservazioni ripetute e calcoli accurati.
+          L'impresa, iniziata nell'estate del 1792, si concluse soltanto alla
+          fine del 1798.
+        </p>
+        <p style="text-align: justify">
+          Quando finalmente i risultati delle due campagne poterono essere
+          riuniti, fu possibile completare i calcoli e determinare la lunghezza
+          dell'arco di meridiano necessaria per ricavare la nuova unità. Il
+          grande progetto della Rivoluzione aveva così trasformato una porzione
+          della superficie terrestre in un riferimento destinato, nelle
+          intenzioni dei suoi ideatori, a valere per tutti gli uomini e per
+          tutti i tempi.
+        </p>
+
+        <div class="box">
+          <h3>Quando anche la misura può sbagliare</h3>
+          <p style="text-align: justify">
+            Dietro la semplicità apparente del numero finale si nascondeva una
+            lunga catena di osservazioni, strumenti e calcoli: ogni passaggio
+            poteva introdurre un errore. Fu soprattutto Méchain a trovarsi di
+            fronte alle difficoltà più complesse. Durante le osservazioni
+            astronomiche effettuate a Barcellona per determinare la latitudine
+            del punto meridionale della catena, si accorse che alcune misure non
+            erano tra loro coerenti. La differenza era piccola, ma troppo grande
+            rispetto alla precisione che egli riteneva di aver raggiunto. Si
+            trattava di un errore di osservazione, di un problema dello
+            strumento o di qualcosa che riguardava la Terra stessa? Méchain
+            cercò a lungo una spiegazione. Il problema era particolarmente
+            difficile perché gli strumenti e i metodi dell'epoca non
+            permettevano ancora di distinguere e quantificare con chiarezza le
+            diverse componenti dell'errore. Il cerchio ripetitore di Borda,
+            utilizzato per ottenere misure angolari di grande precisione, poteva
+            introdurre a sua volta errori sistematici; inoltre, nella regione di
+            Barcellona, la direzione della verticale era influenzata dalla
+            distribuzione irregolare delle masse terrestri, un effetto che le
+            conoscenze geodetiche dell'epoca non consentivano ancora di
+            modellare adeguatamente. La discrepanza tormentò Méchain per anni.
+            Nel tentativo di comprenderne l'origine, tornò più volte sulle
+            proprie osservazioni e continuò a cercare una spiegazione, senza
+            riuscire a risolvere definitivamente il problema. Morì nel 1804
+            mentre era ancora impegnato in nuove osservazioni legate alla
+            misura.
+          </p>
+        </div>
+
+        <p style="text-align: justify">
+          La vicenda mostra così un aspetto fondamentale della scienza: una
+          misura non è mai soltanto un numero. È il risultato di un procedimento
+          nel quale intervengono strumenti, osservazioni, condizioni
+          sperimentali e conoscenze teoriche. Una misura può essere
+          straordinariamente precisa e, allo stesso tempo, contenere un errore
+          sistematico che chi la esegue non è ancora in grado di riconoscere.
+        </p>
+        <p style="text-align: justify">
+          Le moderne misure geodetiche hanno permesso di valutare con maggiore
+          precisione l'entità dell'errore contenuto nella misura del meridiano.
+          Alla luce di queste misure, il metro ricavato dall'impresa di Delambre
+          e Méchain risultò più corto di circa 0,2 millimetri rispetto al valore
+          che si ricava oggi. Una differenza minuscola, ma sufficiente a
+          ricordare che ogni misura è legata agli strumenti, ai metodi e alle
+          conoscenze disponibili nel momento in cui viene effettuata.
+        </p>
+      </section>
+
+      <!-- ================= 9 ================= -->
+      <section class="chapter" data-year="1799">
+        <p class="chapter__eyebrow">Capitolo 9</p>
+        <h2>Dalla definizione del metro al campione materiale</h2>
+        <p style="text-align: justify">
+          Mentre Delambre e Méchain erano impegnati nella difficile misura
+          dell'arco di meridiano, a Parigi prendeva forma il resto del nuovo
+          sistema. L'idea non era soltanto quella di trovare una nuova unità di
+          lunghezza, ma di costruire un sistema nel quale le diverse grandezze
+          fossero collegate tra loro secondo regole semplici e coerenti. La
+          scelta del sistema decimale permetteva di ottenere multipli e
+          sottomultipli attraverso successive potenze di dieci, introducendo una
+          struttura nella quale passare da un'unità all'altra diventava
+          semplice. Venivano così introdotti i prefissi che indicavano multipli
+          e sottomultipli decimali, alcuni dei quali sono ancora oggi in uso,
+          come kilo-, centi- e milli-.
+        </p>
+        <p style="text-align: justify">
+          Anche le diverse grandezze potevano essere collegate attraverso il
+          nuovo sistema. Il metro diventava il riferimento per costruire le
+          unità di superficie e di volume: il decimetro, per esempio, permetteva
+          di definire il decimetro cubo e, attraverso di esso, il litro. La
+          definizione dell'unità di massa venne a sua volta collegata alla massa
+          di un determinato volume d'acqua, creando un rapporto tra lunghezza,
+          volume e massa. Il nuovo sistema non era quindi una semplice
+          collezione di unità indipendenti, ma una struttura nella quale diverse
+          grandezze potevano essere ricondotte a pochi riferimenti fondamentali.
+        </p>
+        <p style="text-align: justify">
+          Il risultato di questo lungo lavoro venne infine materializzato in
+          oggetti destinati a conservare e rendere disponibile la nuova
+          definizione. Il 22 giugno 1799, a Parigi, furono depositati negli
+          Archives de la République i campioni ufficiali del metro e del
+          chilogrammo, realizzati in platino. L'idea di una misura universale
+          assumeva una forma concreta: un oggetto costruito dall'uomo poteva
+          diventare il riferimento comune al quale confrontare tutte le altre
+          misure.
+        </p>
+
+        <figure class="plate">
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/Metric_standards_Rijksmuseum-2.jpg"
+              alt="Campioni metrici storici, Rijksmuseum"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="1280"
+              height="659"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/Metric_standards_Rijksmuseum.jpg</span
+              >
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+          <figcaption style="text-align: justify">
+            Riproduzioni storiche olandesi di campioni metrici, conservate al
+            Rijksmuseum di Amsterdam: un metro in ferro con custodia, un
+            chilogrammo campione in rame e alcuni campioni per la misura del
+            volume. Questi oggetti testimoniano il passaggio dalle definizioni
+            delle nuove unità di misura alla loro realizzazione materiale.
+            <span class="credit">
+              Rijksmuseum, Amsterdam · Wikimedia Commons · CC BY-SA 4.0
+            </span>
+          </figcaption>
+        </figure>
+
+        <div class="box">
+          <h3>Il metro</h3>
+          <p style="text-align: justify">
+            Il metro venne definito come la decimilionesima parte dell'arco di
+            meridiano terrestre compreso tra il Polo Nord e l'Equatore, misurato
+            lungo il meridiano passante per Parigi. Ma una definizione di questo
+            tipo, per quanto elegante, aveva un limite pratico evidente:
+            nessuno, nella vita di tutti i giorni, poteva rimisurare un quarto
+            di meridiano terrestre per verificare il proprio metro. Serviva un
+            oggetto concreto, conservato con cura, a cui chiunque potesse
+            confrontare i propri strumenti.
+          </p>
+          <p style="text-align: justify">
+            Già nel 1793, mentre la triangolazione tra Dunkerque e Barcellona
+            era ancora in corso, fu adottato un valore provvisorio del metro,
+            calcolato sui dati disponibili fino ad allora. Solo nel 1799,
+            completati i calcoli finali di Delambre e Méchain, venne realizzata
+            in platino la barra ufficiale nota come
+            <em>metro campione</em>, destinata a rappresentare concretamente la
+            nuova unità. Il valore della barra rifletteva inevitabilmente anche
+            gli errori presenti nella misura del meridiano: il metro materiale
+            non era quindi una realizzazione perfetta della definizione
+            geometrica, ma il risultato concreto di quella complessa impresa
+            scientifica.
+          </p>
+          <p style="text-align: justify">
+            Quasi un secolo più tardi, nel 1889, un nuovo prototipo
+            internazionale, realizzato in una lega di platino‑iridio scelta per
+            la sua stabilità, divenne il riferimento ufficiale del metro.
+            Conservato presso il Bureau International des Poids et Mesures
+            (BIPM) a Sèvres, nei pressi di Parigi, esso serviva come riferimento
+            per i campioni nazionali realizzati e adottati dai paesi aderenti
+            alla Convenzione del Metro.
+          </p>
+          <p style="text-align: justify">
+            Il metro aveva così compiuto un passaggio fondamentale: da una
+            definizione fondata sulla misura della Terra era diventato anche un
+            riferimento materiale, conservato e condiviso dalla comunità
+            scientifica internazionale. Ma quel campione, come la misura dalla
+            quale era nato, portava con sé anche i limiti delle conoscenze e
+            degli strumenti dell'epoca.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 10 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 10</p>
+        <h2>Dal metro al chilogrammo</h2>
+        <p style="text-align: justify">
+          Il nuovo sistema di misura non si limitava a definire una nuova unità
+          di lunghezza, ma cercava di collegare tra loro le diverse grandezze
+          attraverso relazioni semplici e razionali. Il metro costituiva il
+          punto di partenza: da esso si potevano ricavare il decimetro e,
+          attraverso le dimensioni di un cubo di lato pari a un decimetro,
+          l'unità di volume, il litro. A sua volta, il litro permetteva di
+          stabilire un legame con la massa attraverso la densità dell'acqua.
+          L'idea era quindi quella di collegare lunghezza, volume e massa
+          all'interno di una stessa struttura coerente.
+        </p>
+        <p style="text-align: justify">
+          Ma una relazione teorica non era sufficiente: occorreva trasformarla
+          in un riferimento concreto, che potesse essere conservato e utilizzato
+          per confrontare le misure. La massa di un determinato volume d'acqua
+          dipende infatti dalle condizioni nelle quali viene effettuata la
+          misura, in particolare dalla temperatura e dalla purezza dell'acqua.
+          Per disporre di un riferimento materiale stabile e facilmente
+          confrontabile, nel 1799 venne quindi realizzato il
+          <em>Kilogramme des Archives</em>, un cilindro di platino destinato a
+          costituire il campione materiale dell'unità di massa.
+        </p>
+        <p style="text-align: justify">
+          Come era avvenuto per il metro, una definizione fondata su una
+          grandezza naturale veniva trasformata in un campione materiale,
+          conservato e custodito come riferimento ufficiale. Il chilogrammo
+          mostrava così una caratteristica fondamentale della nuova metrologia:
+          la natura poteva fornire il riferimento concettuale, ma la sua
+          realizzazione pratica richiedeva ancora un oggetto costruito
+          dall'uomo.
+        </p>
+
+        <figure class="plate" style="max-width: 500px; margin: 0 auto">
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/2-Usage_des_Nouvelles_Mesures_1800.jpg"
+              alt="Usage des Nouvelles Mesures, 1800"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="1274"
+              height="2000"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/2-Usage_des_Nouvelles_Mesures_1800.jpg</span
+              >
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+          <figcaption style="text-align: justify">
+            Stampa del 1800 che illustra le nuove unità decimali, divenute norma
+            legale in Francia il 4 novembre 1800, cinque anni dopo la prima
+            introduzione del sistema metrico. Nelle didascalie, ciascuna delle
+            sei nuove unità è affiancata tra parentesi dalla corrispondente
+            antica unità francese: il litro, il grammo, il metro, l'are (100
+            metri quadrati), il franco e lo stère (1 metro cubo di legna).
+            <span class="credit">
+              Bibliothèque nationale de France · Pubblico dominio
+            </span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <!-- ================= 11 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 11</p>
+        <h2>Sette unità come alfabeto della misura</h2>
+        <p style="text-align: justify">
+          Il metro e il chilogrammo rappresentavano soltanto l'inizio. Con lo
+          sviluppo della scienza e della tecnologia divenne necessario misurare
+          in modo condiviso anche il tempo, la temperatura, la corrente
+          elettrica, la quantità di sostanza e l'intensità luminosa. Il sistema
+          delle unità si ampliò progressivamente, fino a comprendere le
+          principali grandezze utilizzate dalla fisica.
+        </p>
+        <p style="text-align: justify">
+          Non tutte queste unità ebbero la stessa origine. Il metro aveva
+          costituito il riferimento fondamentale per la lunghezza e, nel
+          progetto originario del sistema metrico, era stato collegato anche
+          alla definizione delle unità di volume e di massa. Altre grandezze
+          seguirono invece percorsi differenti, legati allo sviluppo della
+          fisica e delle sue applicazioni. Nel corso del tempo, queste diverse
+          unità furono progressivamente ricondotte all'interno di un unico
+          sistema internazionale.
+        </p>
+        <p style="text-align: justify">
+          Il Sistema Internazionale di Unità di Misura (SI) individua oggi sette
+          unità fondamentali, associate ad altrettante grandezze fisiche. A
+          partire da queste unità vengono definite tutte le altre unità di
+          misura utilizzate nella scienza e nella tecnologia. Il termine
+          "fondamentali" non significa però che queste grandezze siano più
+          importanti delle altre, ma indica che costituiscono la base scelta dal
+          Sistema Internazionale per esprimere tutte le altre unità. Le
+          grandezze derivate, come velocità, area, volume, forza ed energia, per
+          esempio, possono infatti essere espresse attraverso combinazioni delle
+          unità fondamentali e pertanto con un numero limitato di riferimenti è
+          possibile descrivere quantitativamente una parte enorme dei fenomeni
+          fisici.
+        </p>
+        <p style="text-align: justify">
+          Ma anche questo alfabeto aveva bisogno di riferimenti materiali:
+          campioni, strumenti e procedure attraverso i quali rendere concrete le
+          unità. Il passo successivo della metrologia sarebbe stato ancora più
+          radicale: cercare quei riferimenti non negli oggetti costruiti
+          dall'uomo, ma nelle proprietà fondamentali della natura.
+        </p>
+
+        <div class="table-wrap">
+          <table class="units">
+            <caption>
+              Le sette unità fondamentali del Sistema Internazionale
+            </caption>
+            <thead>
+              <tr>
+                <th>Grandezza fisica</th>
+                <th>Unità</th>
+                <th>Simbolo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Lunghezza</td>
+                <td>metro</td>
+                <td class="sym">m</td>
+              </tr>
+              <tr>
+                <td>Massa</td>
+                <td>chilogrammo</td>
+                <td class="sym">kg</td>
+              </tr>
+              <tr>
+                <td>Tempo</td>
+                <td>secondo</td>
+                <td class="sym">s</td>
+              </tr>
+              <tr>
+                <td>Corrente elettrica</td>
+                <td>ampere</td>
+                <td class="sym">A</td>
+              </tr>
+              <tr>
+                <td>Temperatura termodinamica</td>
+                <td>kelvin</td>
+                <td class="sym">K</td>
+              </tr>
+              <tr>
+                <td>Quantità di sostanza</td>
+                <td>mole</td>
+                <td class="sym">mol</td>
+              </tr>
+              <tr>
+                <td>Intensità luminosa</td>
+                <td>candela</td>
+                <td class="sym">cd</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= 12 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 12</p>
+        <h2>Il limite dei campioni materiali</h2>
+        <p style="text-align: justify">
+          Anche il più accurato dei campioni materiali rimane pur sempre un
+          oggetto fisico: può essere conservato, confrontato e protetto, ma può
+          anche deteriorarsi, deformarsi o subire variazioni. Il problema
+          divenne particolarmente evidente nel caso del metro.
+        </p>
+        <p style="text-align: justify">
+          Il prototipo internazionale conservato a Sèvres, realizzato in una
+          lega di platino e iridio e adottato come riferimento internazionale
+          nel 1889, rappresentò per decenni il fondamento della misura della
+          lunghezza. La sua costruzione aveva costituito una straordinaria
+          conquista: un singolo oggetto, custodito con estrema cura, permetteva
+          alla comunità scientifica internazionale di disporre di un riferimento
+          comune. Ma proprio la sua natura di oggetto materiale ne mostrava
+          anche i limiti. Da un lato, lo sviluppo della scienza e dell'industria
+          richiedeva misure sempre più precise; dall'altro, affidare la
+          definizione del metro a un unico campione materiale significava
+          rendere il sistema dipendente da un oggetto conservato in un luogo
+          preciso, al quale tutti gli altri campioni dovevano essere ricondotti
+          attraverso confronti.
+        </p>
+        <p style="text-align: justify">
+          Il problema non era quindi soltanto costruire una barra ancora più
+          accurata. Occorreva cambiare il principio stesso sul quale si fondava
+          la definizione dell'unità: il nuovo metro doveva essere non soltanto
+          più preciso, ma anche riproducibile. Invece di affidare la definizione
+          di una grandezza a un oggetto costruito dall'uomo, si cominciò così a
+          cercare un riferimento nei fenomeni naturali: nel movimento della
+          Terra, nelle proprietà della luce e nei fenomeni atomici, fino ad
+          arrivare alle costanti fondamentali della fisica.
+        </p>
+      </section>
+
+      <!-- ================= 13: 1889 ================= -->
+      <section class="chapter" data-year="1889">
+        <p class="chapter__eyebrow">Capitolo 13</p>
+        <h2>1889: il metro è un oggetto</h2>
+        <p style="text-align: justify">
+          Nel 1889 il metro aveva ormai un riferimento materiale concreto. Il
+          prototipo internazionale, realizzato in una lega di platino e iridio,
+          era stato scelto come riferimento internazionale per la lunghezza e
+          conservato presso il Bureau International des Poids et Mesures (BIPM)
+          a Sèvres, vicino a Parigi. Da quel momento, la misura del metro poteva
+          essere ricondotta a un campione materiale riconosciuto dalla comunità
+          scientifica internazionale.
+        </p>
+
+        <figure class="plate" style="max-width: 460px; margin: 2rem auto">
+          <div class="frame">
+            <img
+              src="img_misurare-il-mondo/US_National_Length_Meter.jpeg"
+              alt="Prototipo nazionale del metro n. 27"
+              loading="lazy"
+              onerror="this.closest('.plate').classList.add('is-missing')"
+              width="350"
+              height="300"
+              decoding="async"
+            />
+            <div class="plate-fallback">
+              <span class="plate-fallback__glyph">i</span>
+              <span class="plate-fallback__path"
+                >img/US_National_Length_Meter.jpeg</span
+              >
+              <span class="plate-fallback__hint">Immagine da inserire.</span>
+            </div>
+          </div>
+          <figcaption style="text-align: justify">
+            Prototipo nazionale del metro n. 27, realizzato nel 1889 in lega di
+            platino e iridio dal Bureau international des poids et mesures
+            (BIPM) e assegnato agli Stati Uniti nel 1890. Utilizzato come
+            principale riferimento nazionale per le misure di lunghezza dal 1893
+            al 1960, il campione è oggi conservato al NIST Museum di
+            Gaithersburg, Maryland.
+            <span class="credit">
+              NIST Research Library & Museum · Pubblico dominio
+            </span>
+          </figcaption>
+        </figure>
+
+        <p style="text-align: justify">
+          La soluzione sembrava ideale. Il campione era realizzato con un
+          materiale particolarmente stabile, custodito in condizioni controllate
+          e protetto con estrema cura. Attraverso confronti periodici, i
+          campioni nazionali potevano essere messi in relazione con il prototipo
+          internazionale, permettendo di mantenere una scala comune delle
+          lunghezze.
+        </p>
+        <p style="text-align: justify">
+          Ma proprio questa soluzione conteneva una contraddizione. Perché il
+          metro fosse davvero universale, era necessario che tutti potessero
+          riferirsi allo stesso campione. Eppure quel campione era un oggetto
+          unico, conservato in un luogo preciso, al quale gli altri campioni
+          dovevano essere ricondotti attraverso confronti. La definizione
+          universale della lunghezza dipendeva quindi, in ultima analisi, dalla
+          conservazione di una particolare barra metallica.
+        </p>
+        <p style="text-align: justify">
+          Ma con il progresso della fisica sperimentale e delle tecniche di
+          misura emerse una domanda nuova: era possibile definire il metro
+          attraverso qualcosa di più stabile e riproducibile di un oggetto
+          costruito dall'uomo?
+        </p>
+      </section>
+
+      <!-- ================= 14: 1960 ================= -->
+      <section class="chapter" data-year="1960">
+        <p class="chapter__eyebrow">Capitolo 14</p>
+        <h2>1960: il metro diventa un fenomeno fisico</h2>
+        <p style="text-align: justify">
+          La ricerca di un riferimento più stabile portò la metrologia a
+          guardare ai fenomeni naturali. Se un oggetto costruito dall'uomo
+          poteva deteriorarsi o non essere riprodotto perfettamente, un fenomeno
+          fisico poteva invece essere osservato in condizioni controllate e
+          riprodotto sperimentalmente in laboratori diversi. Le radiazioni
+          elettromagnetiche offrivano proprio questa possibilità: le loro
+          proprietà potevano essere studiate con strumenti sempre più precisi e
+          potevano fornire un riferimento non legato a un particolare oggetto.
+        </p>
+        <p style="text-align: justify">
+          Nel 1960 la XI Conferenza Generale dei Pesi e delle Misure adottò una
+          nuova definizione del metro basata sulla lunghezza d'onda di una
+          specifica riga spettrale emessa dall'atomo di kripton-86. Il metro non
+          era più identificato con la lunghezza di una barra conservata a
+          Sèvres, ma con un numero preciso di lunghezze d'onda della radiazione
+          scelta come riferimento.
+        </p>
+
+        <p style="text-align: justify">
+          La differenza rispetto al prototipo internazionale era profonda. Una
+          barra poteva essere conservata in un luogo soltanto e poteva essere
+          confrontata con altri campioni; una radiazione atomica, invece, poteva
+          essere nuovamente ottenuta ogni volta che si ricreavano le condizioni
+          sperimentali necessarie per la transizione e si disponeva degli
+          strumenti adeguati per osservarla. Il riferimento della misura
+          cominciava così a svincolarsi dall'oggetto che lo custodiva.
+        </p>
+        <p style="text-align: justify">
+          La nuova definizione rappresentava quindi un importante passo avanti:
+          il metro non era più qualcosa che la comunità scientifica doveva
+          possedere, ma qualcosa che poteva essere realizzato attraverso un
+          fenomeno fisico. La misura diventava progressivamente indipendente da
+          un luogo e da un manufatto particolare.
+        </p>
+
+        <div class="box">
+          <h3>Perché una radiazione può diventare un riferimento?</h3>
+
+          <figure class="diagram" style="margin-top: 0">
+            <svg
+              viewBox="0 0 680 196"
+              role="img"
+              aria-labelledby="dgtitle2 dgdesc2"
+            >
+              <title id="dgtitle2">
+                Schema atomo, radiazione, lunghezza d'onda, metro
+              </title>
+              <desc id="dgdesc2">
+                Quattro caselle collegate mostrano il percorso: atomo di
+                kripton-86, radiazione emessa, lunghezza d'onda, metro definito
+                come 1650763,73 lunghezze d'onda.
+              </desc>
+              <defs>
+                <marker
+                  id="arrow2"
+                  viewBox="0 0 10 10"
+                  refX="8"
+                  refY="5"
+                  markerWidth="6"
+                  markerHeight="6"
+                  orient="auto-start-reverse"
+                >
+                  <path
+                    d="M2 1L8 5L2 9"
+                    fill="none"
+                    stroke="#4A4030"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </marker>
+              </defs>
+              <g font-family="Fraunces, serif">
+                <g>
+                  <rect
+                    x="40"
+                    y="100"
+                    width="135"
+                    height="56"
+                    rx="8"
+                    fill="#DCEDE9"
+                    stroke="#0F8A7C"
+                    stroke-width="0.6"
+                  />
+                  <text
+                    x="107"
+                    y="122"
+                    text-anchor="middle"
+                    font-size="13"
+                    fill="#0A5850"
+                    font-weight="600"
+                  >
+                    Atomo di 86Kr
+                  </text>
+                  <text
+                    x="107"
+                    y="140"
+                    text-anchor="middle"
+                    font-size="11"
+                    font-family="IBM Plex Mono, monospace"
+                    fill="#5C5140"
+                  >
+                    transizione atomica
+                  </text>
+                </g>
+                <line
+                  x1="175"
+                  y1="128"
+                  x2="188"
+                  y2="128"
+                  stroke="#4A4030"
+                  stroke-width="1"
+                  marker-end="url(#arrow2)"
+                />
+                <g>
+                  <rect
+                    x="190"
+                    y="100"
+                    width="135"
+                    height="56"
+                    rx="8"
+                    fill="#DCEDE9"
+                    stroke="#0F8A7C"
+                    stroke-width="0.6"
+                  />
+                  <text
+                    x="257"
+                    y="122"
+                    text-anchor="middle"
+                    font-size="13"
+                    fill="#0A5850"
+                    font-weight="600"
+                  >
+                    Radiazione
+                  </text>
+                  <text
+                    x="257"
+                    y="140"
+                    text-anchor="middle"
+                    font-size="11"
+                    font-family="IBM Plex Mono, monospace"
+                    fill="#5C5140"
+                  >
+                    onda emessa
+                  </text>
+                </g>
+                <line
+                  x1="325"
+                  y1="128"
+                  x2="338"
+                  y2="128"
+                  stroke="#4A4030"
+                  stroke-width="1"
+                  marker-end="url(#arrow2)"
+                />
+                <g>
+                  <rect
+                    x="340"
+                    y="100"
+                    width="135"
+                    height="56"
+                    rx="8"
+                    fill="#DCEDE9"
+                    stroke="#0F8A7C"
+                    stroke-width="0.6"
+                  />
+                  <text
+                    x="407"
+                    y="122"
+                    text-anchor="middle"
+                    font-size="13"
+                    fill="#0A5850"
+                    font-weight="600"
+                  >
+                    Lunghezza
+                  </text>
+                  <text
+                    x="407"
+                    y="140"
+                    text-anchor="middle"
+                    font-size="11"
+                    font-family="IBM Plex Mono, monospace"
+                    fill="#5C5140"
+                  >
+                    d'onda (&#955;)
+                  </text>
+                </g>
+                <line
+                  x1="475"
+                  y1="128"
+                  x2="488"
+                  y2="128"
+                  stroke="#4A4030"
+                  stroke-width="1"
+                  marker-end="url(#arrow2)"
+                />
+                <g>
+                  <rect
+                    x="490"
+                    y="100"
+                    width="135"
+                    height="56"
+                    rx="8"
+                    fill="#DCEDE9"
+                    stroke="#0F8A7C"
+                    stroke-width="0.6"
+                  />
+                  <text
+                    x="557"
+                    y="122"
+                    text-anchor="middle"
+                    font-size="13"
+                    fill="#0A5850"
+                    font-weight="600"
+                  >
+                    Metro
+                  </text>
+                  <text
+                    x="557"
+                    y="140"
+                    text-anchor="middle"
+                    font-size="11"
+                    font-family="IBM Plex Mono, monospace"
+                    fill="#5C5140"
+                  >
+                    1 650 763,73 &#955;
+                  </text>
+                </g>
+              </g>
+              <text
+                x="340"
+                y="188"
+                text-anchor="middle"
+                font-family="IBM Plex Mono, monospace"
+                font-size="12"
+                fill="#5C5140"
+              >
+                1960 &#8212; XI CGPM: il metro definito tramite una radiazione
+                atomica del kripton-86
+              </text>
+            </svg>
+          </figure>
+
+          <p style="text-align: justify">
+            Il valore 1 650 763,73 non stabiliva una nuova lunghezza per il
+            metro: indicava quante volte la lunghezza d'onda &#955; della
+            radiazione di riferimento doveva essere contenuta nel metro, in modo
+            da mantenere la continuità con la lunghezza dell'unità già definita
+            dal prototipo internazionale. La nuova definizione cambiava quindi
+            il modo di realizzare il metro, non la sua lunghezza: invece di
+            riferirsi a una particolare barra metallica, la misura poteva essere
+            ricondotta a una proprietà fisica riproducibile della radiazione del
+            kripton-86.
+          </p>
+
+          <!-- =================  ================= -->
+
+          <figure class="diagram">
+            <svg
+              viewBox="0 0 680 390"
+              role="img"
+              aria-labelledby="dgtitle3 dgdesc3"
+            >
+              <title id="dgtitle3">
+                Illustrazione dell'atomo, dell'onda emessa e del righello del
+                metro
+              </title>
+
+              <desc id="dgdesc3">
+                Un atomo di kripton-86 durante una transizione atomica emette
+                radiazione elettromagnetica; la radiazione è rappresentata
+                schematicamente come un'onda. Un righello simbolico mostra come
+                1 650 763,73 lunghezze d'onda nel vuoto corrispondano a un
+                metro.
+              </desc>
+
+              <defs>
+                <marker
+                  id="arrow3"
+                  viewBox="0 0 10 10"
+                  refX="8"
+                  refY="5"
+                  markerWidth="6"
+                  markerHeight="6"
+                  orient="auto-start-reverse"
+                >
+                  <path
+                    d="M2 1L8 5L2 9"
+                    fill="none"
+                    stroke="#4A4030"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </marker>
+              </defs>
+
+              <!-- ================= ATOMO ================= -->
+
+              <circle
+                cx="140"
+                cy="110"
+                r="12"
+                fill="#A24A2E"
+                stroke="#7C3018"
+                stroke-width="0.5"
+              />
+
+              <!-- livelli energetici schematici -->
+              <line
+                x1="105"
+                y1="90"
+                x2="175"
+                y2="90"
+                stroke="#8A7F68"
+                stroke-width="1"
+              />
+
+              <line
+                x1="105"
+                y1="130"
+                x2="175"
+                y2="130"
+                stroke="#8A7F68"
+                stroke-width="1"
+              />
+
+              <!-- elettrone nello stato eccitato -->
+              <circle cx="165" cy="90" r="5" fill="#3B6E91" />
+
+              <!-- transizione verso lo stato energetico inferiore -->
+              <path
+                d="M165,96 L165,124"
+                fill="none"
+                stroke="#5C5140"
+                stroke-width="1"
+                stroke-dasharray="3,3"
+                marker-end="url(#arrow3)"
+              />
+
+              <!-- emissione della radiazione -->
+              <g stroke="#BA7517" stroke-width="1.2" stroke-linecap="round">
+                <line x1="174" y1="103" x2="180" y2="97" />
+                <line x1="177" y1="109" x2="185" y2="109" />
+                <line x1="174" y1="115" x2="180" y2="121" />
+              </g>
+
+              <!-- ================= ONDA ================= -->
+
+              <path
+                d="M190,110
+         Q200,94 210,110
+         Q220,126 230,110
+         Q240,94 250,110
+         Q260,126 270,110
+         Q280,94 290,110
+         Q300,126 310,110
+         Q320,94 330,110
+         Q340,126 350,110
+         Q360,94 370,110
+         Q380,126 390,110
+         Q400,94 410,110
+         Q420,126 430,110
+         Q440,94 450,110
+         Q460,126 470,110
+         Q480,94 490,110
+         Q500,126 510,110
+         Q520,94 530,110
+         Q540,126 550,110
+         Q560,94 570,110
+         Q580,126 590,110
+         Q600,94 610,110"
+                fill="none"
+                stroke="#BA7517"
+                stroke-width="1.6"
+              />
+
+              <!-- ================= LUNGHEZZA D'ONDA ================= -->
+
+              <line
+                x1="200"
+                y1="75"
+                x2="200"
+                y2="94"
+                stroke="#5C5140"
+                stroke-width="0.5"
+                stroke-dasharray="2,2"
+              />
+
+              <line
+                x1="240"
+                y1="75"
+                x2="240"
+                y2="94"
+                stroke="#5C5140"
+                stroke-width="0.5"
+                stroke-dasharray="2,2"
+              />
+
+              <line
+                x1="200"
+                y1="75"
+                x2="240"
+                y2="75"
+                stroke="#5C5140"
+                stroke-width="1"
+                marker-start="url(#arrow3)"
+                marker-end="url(#arrow3)"
+              />
+
+              <text
+                x="220"
+                y="68"
+                text-anchor="middle"
+                font-family="Fraunces, serif"
+                font-weight="600"
+                font-size="15"
+                fill="#292217"
+              >
+                &#955;
+              </text>
+
+              <!-- ================= ETICHETTE ================= -->
+
+              <path
+                d="M209,90 L228,55"
+                fill="none"
+                stroke="#8A7D65"
+                stroke-width="0.6"
+                stroke-dasharray="2,2"
+              />
+
+              <text
+                x="230"
+                y="52"
+                font-family="IBM Plex Mono, monospace"
+                font-size="12"
+                fill="#5C5140"
+              >
+                transizione atomica
+              </text>
+
+              <text
+                x="140"
+                y="185"
+                text-anchor="middle"
+                font-family="Fraunces, serif"
+                font-size="13"
+                fill="#292217"
+              >
+                atomo di kripton-86
+              </text>
+
+              <path
+                d="M250,126 L250,150"
+                fill="none"
+                stroke="#8A7D65"
+                stroke-width="0.6"
+                stroke-dasharray="2,2"
+              />
+
+              <text
+                x="250"
+                y="163"
+                text-anchor="middle"
+                font-family="IBM Plex Mono, monospace"
+                font-size="12"
+                fill="#5C5140"
+              >
+                radiazione emessa
+              </text>
+
+              <!-- ================= METRO ================= -->
+
+              <line
+                x1="580"
+                y1="150"
+                x2="580"
+                y2="296"
+                stroke="#4A4030"
+                stroke-width="1"
+                marker-end="url(#arrow3)"
+              />
+
+              <text
+                x="340"
+                y="272"
+                text-anchor="middle"
+                font-family="IBM Plex Mono, monospace"
+                font-size="12"
+                fill="#5C5140"
+              >
+                1 650 763,73 lunghezze d'onda nel vuoto
+              </text>
+
+              <!-- righello simbolico -->
+              <g>
+                <rect
+                  x="60"
+                  y="300"
+                  width="560"
+                  height="24"
+                  rx="4"
+                  fill="#EAE1C9"
+                  stroke="#8A7F68"
+                  stroke-width="0.5"
+                />
+
+                <g stroke="#8A7F68" stroke-width="0.5">
+                  <line x1="80" y1="290" x2="80" y2="300" />
+                  <line x1="100" y1="290" x2="100" y2="300" />
+                  <line x1="120" y1="290" x2="120" y2="300" />
+                  <line x1="140" y1="290" x2="140" y2="300" />
+                  <line x1="160" y1="290" x2="160" y2="300" />
+                  <line x1="180" y1="290" x2="180" y2="300" />
+                  <line x1="200" y1="290" x2="200" y2="300" />
+                  <line x1="220" y1="290" x2="220" y2="300" />
+                  <line x1="240" y1="290" x2="240" y2="300" />
+                  <line x1="260" y1="290" x2="260" y2="300" />
+
+                  <line x1="420" y1="290" x2="420" y2="300" />
+                  <line x1="440" y1="290" x2="440" y2="300" />
+                  <line x1="460" y1="290" x2="460" y2="300" />
+                  <line x1="480" y1="290" x2="480" y2="300" />
+                  <line x1="500" y1="290" x2="500" y2="300" />
+                  <line x1="520" y1="290" x2="520" y2="300" />
+                  <line x1="540" y1="290" x2="540" y2="300" />
+                  <line x1="560" y1="290" x2="560" y2="300" />
+                  <line x1="580" y1="290" x2="580" y2="300" />
+                  <line x1="600" y1="290" x2="600" y2="300" />
+                </g>
+
+                <text
+                  x="340"
+                  y="316"
+                  text-anchor="middle"
+                  font-family="IBM Plex Mono, monospace"
+                  font-size="12"
+                  fill="#5C5140"
+                >
+                  ...
+                </text>
+              </g>
+
+              <!-- ================= CONCLUSIONE ================= -->
+
+              <text
+                x="340"
+                y="350"
+                text-anchor="middle"
+                font-family="Fraunces, serif"
+                font-weight="600"
+                font-size="15"
+                fill="#292217"
+              >
+                = 1 metro (definizione 1960)
+              </text>
+
+              <text
+                x="340"
+                y="374"
+                text-anchor="middle"
+                font-family="IBM Plex Mono, monospace"
+                font-size="11"
+                fill="#8A7D65"
+              >
+                schema illustrativo, non in scala
+              </text>
+            </svg>
+          </figure>
+
+          <p style="text-align: justify">
+            Quando un atomo passa da uno stato energetico a un altro, può
+            emettere una radiazione elettromagnetica con una frequenza e una
+            lunghezza d'onda ben definite. Le proprietà di questa radiazione
+            possono essere nuovamente osservate ogni volta che si ricreano le
+            condizioni necessarie per la transizione.
+          </p>
+          <p style="text-align: justify">
+            Nel 1960 questa proprietà fu utilizzata per definire il metro
+            attraverso una specifica transizione atomica del kripton-86. Il
+            metro venne definito come una lunghezza pari a 1 650 763,73
+            lunghezze d'onda di quella radiazione nel vuoto, permettendo così di
+            sostituire il prototipo materiale con un riferimento naturale e
+            riproducibile.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 15: 1983 ================= -->
+      <section class="chapter" data-year="1983">
+        <p class="chapter__eyebrow">Capitolo 15</p>
+        <h2>1983: il metro si lega alla velocità della luce</h2>
+        <p style="text-align: justify">
+          Con il passare degli anni anche questa soluzione mostrò i suoi limiti.
+          La realizzazione pratica del riferimento basato sulla radiazione del
+          kripton‑86 dipendeva dalle caratteristiche della sorgente e dalle
+          condizioni sperimentali. Nel frattempo, lo sviluppo degli orologi
+          atomici e delle tecnologie elettroniche permetteva di determinare le
+          frequenze con una precisione sempre maggiore. Diventava così possibile
+          fare un passo ulteriore e fondare la definizione del metro su una
+          proprietà ancora più universale: la velocità della luce nel vuoto.
+        </p>
+        <p style="text-align: justify">
+          Il percorso iniziato con la barra di platino‑iridio aveva raggiunto un
+          punto di svolta. Il metro non era più legato a un oggetto da custodire
+          e non era più definito attraverso una particolare radiazione di
+          riferimento: diventava una definizione fondata su una costante
+          fondamentale della fisica. Nel 1983 la XVII Conferenza Generale dei
+          Pesi e delle Misure definì il metro fissando esattamente 299 792 458
+          metri al secondo il valore della velocità della luce nel vuoto.
+        </p>
+        <p style="text-align: justify">
+          La novità era profonda. Nelle definizioni precedenti si partiva da un
+          riferimento fisico — prima una barra, poi una particolare radiazione —
+          e si utilizzava quel riferimento per realizzare l'unità. Dal 1983 il
+          procedimento concettuale si rovesciava: non era più necessario trovare
+          o costruire un campione della lunghezza. Si fissava invece esattamente
+          il valore di una costante fondamentale della natura e, attraverso la
+          definizione del secondo, da essa si ricavava il metro.
+        </p>
+        <p style="text-align: justify">
+          La misura della lunghezza diventava così indipendente da un
+          particolare oggetto o da una particolare sorgente luminosa. La
+          velocità della luce nel vuoto non doveva essere conservata,
+          trasportata o confrontata con un campione: era una proprietà della
+          natura alla quale la definizione del metro poteva fare riferimento
+          ovunque.
+        </p>
+
+        <figure class="diagram">
+          <svg
+            viewBox="0 0 680 240"
+            role="img"
+            aria-labelledby="dgtitle4 dgdesc4"
+          >
+            <title id="dgtitle4">
+              Illustrazione del metro definito tramite la velocità della luce
+            </title>
+            <desc id="dgdesc4">
+              Un impulso di luce parte da una sorgente e raggiunge un
+              rivelatore; due orologi segnano l'istante di partenza e di arrivo.
+              Poiché c è fissata esattamente, la distanza d si ricava da d = c
+              per Delta t, senza campioni materiali.
+            </desc>
+            <defs>
+              <marker
+                id="arrow4"
+                viewBox="0 0 10 10"
+                refX="8"
+                refY="5"
+                markerWidth="6"
+                markerHeight="6"
+                orient="auto-start-reverse"
+              >
+                <path
+                  d="M2 1L8 5L2 9"
+                  fill="none"
+                  stroke="#4A4030"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </marker>
+            </defs>
+            <circle
+              cx="90"
+              cy="55"
+              r="14"
+              fill="none"
+              stroke="#8A7F68"
+              stroke-width="1"
+            />
+            <line
+              x1="90"
+              y1="55"
+              x2="90"
+              y2="44"
+              stroke="#5C5140"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <circle cx="90" cy="55" r="1.5" fill="#5C5140" />
+            <circle
+              cx="585"
+              cy="55"
+              r="14"
+              fill="none"
+              stroke="#8A7F68"
+              stroke-width="1"
+            />
+            <line
+              x1="585"
+              y1="55"
+              x2="593"
+              y2="47"
+              stroke="#5C5140"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <circle cx="585" cy="55" r="1.5" fill="#5C5140" />
+            <text
+              x="90"
+              y="80"
+              text-anchor="middle"
+              font-family="IBM Plex Mono, monospace"
+              font-size="11"
+              fill="#5C5140"
+            >
+              t&#8320; = 0
+            </text>
+            <text
+              x="585"
+              y="80"
+              text-anchor="middle"
+              font-family="IBM Plex Mono, monospace"
+              font-size="11"
+              fill="#5C5140"
+            >
+              t&#8321; = t&#8320;+&#916;t
+            </text>
+            <line
+              x1="104"
+              y1="55"
+              x2="571"
+              y2="55"
+              stroke="#5C5140"
+              stroke-width="1"
+              stroke-dasharray="4,3"
+              marker-end="url(#arrow4)"
+            />
+            <text
+              x="337"
+              y="42"
+              text-anchor="middle"
+              font-family="Fraunces, serif"
+              font-weight="600"
+              font-size="15"
+              fill="#292217"
+            >
+              &#916;t
+            </text>
+            <rect
+              x="50"
+              y="100"
+              width="30"
+              height="24"
+              rx="4"
+              fill="#F1E3C7"
+              stroke="#A8742E"
+              stroke-width="0.6"
+            />
+            <text
+              x="65"
+              y="138"
+              text-anchor="middle"
+              font-family="IBM Plex Mono, monospace"
+              font-size="11"
+              fill="#5C5140"
+            >
+              sorgente
+            </text>
+            <rect
+              x="585"
+              y="100"
+              width="30"
+              height="24"
+              rx="4"
+              fill="#DCEDE9"
+              stroke="#0F8A7C"
+              stroke-width="0.6"
+            />
+            <text
+              x="600"
+              y="138"
+              text-anchor="middle"
+              font-family="IBM Plex Mono, monospace"
+              font-size="11"
+              fill="#5C5140"
+            >
+              rivelatore
+            </text>
+            <line
+              x1="90"
+              y1="112"
+              x2="585"
+              y2="112"
+              stroke="#C9B99A"
+              stroke-width="0.5"
+              stroke-dasharray="2,3"
+            />
+            <circle cx="280" cy="112" r="3" fill="#EF9F27" opacity="0.35" />
+            <circle cx="300" cy="112" r="3" fill="#EF9F27" opacity="0.55" />
+            <circle cx="320" cy="112" r="3.5" fill="#EF9F27" opacity="0.8" />
+            <circle cx="340" cy="112" r="6" fill="#BA7517" />
+            <line
+              x1="65"
+              y1="160"
+              x2="65"
+              y2="170"
+              stroke="#5C5140"
+              stroke-width="1"
+            />
+            <line
+              x1="600"
+              y1="160"
+              x2="600"
+              y2="170"
+              stroke="#5C5140"
+              stroke-width="1"
+            />
+            <line
+              x1="65"
+              y1="165"
+              x2="600"
+              y2="165"
+              stroke="#5C5140"
+              stroke-width="1"
+              marker-start="url(#arrow4)"
+              marker-end="url(#arrow4)"
+            />
+            <text
+              x="337"
+              y="152"
+              text-anchor="middle"
+              font-family="Fraunces, serif"
+              font-weight="600"
+              font-size="15"
+              fill="#292217"
+            >
+              d
+            </text>
+            <text
+              x="337"
+              y="192"
+              text-anchor="middle"
+              font-family="Fraunces, serif"
+              font-weight="600"
+              font-size="16"
+              fill="#0A5850"
+            >
+              d = c &#183; &#916;t
+            </text>
+            <text
+              x="337"
+              y="214"
+              text-anchor="middle"
+              font-family="IBM Plex Mono, monospace"
+              font-size="11"
+              fill="#5C5140"
+            >
+              c = 299 792 458 m/s, valore esatto fissato per definizione
+            </text>
+          </svg>
+          <figcaption style="text-align: justify">
+            Un impulso di luce parte da una sorgente e raggiunge un rivelatore;
+            i due orologi segnano l'istante iniziale t&#8320; e quello finale
+            t&#8321;. Nel caso rappresentato, l'intervallo t&#8321; − t&#8320; è
+            pari a 1/299 792 458 di secondo: poiché c è fissata esattamente per
+            definizione, la luce percorre in questo intervallo la distanza d =
+            c·&#916;t = 1 m. Il metro può così essere realizzato senza alcun
+            confronto con un campione materiale.
+          </figcaption>
+        </figure>
+
+        <p style="text-align: justify">
+          In pratica, una volta realizzato il secondo, la definizione permette
+          di realizzare il metro attraverso la propagazione della luce:
+          stabilendo un intervallo di tempo e conoscendo esattamente <em>c</em>,
+          è possibile determinare la distanza percorsa dalla luce senza
+          confrontarla con alcun campione materiale.
+        </p>
+
+        <div class="box box--formula">
+          <h3>Come viene definito il metro?</h3>
+          <p>
+            Il valore della velocità della luce nel vuoto è fissato esattamente
+            a
+          </p>
+          <div class="equation">c = 299 792 458 m·s<sup>&minus;1</sup></div>
+          <p>
+            Il metro è quindi definito come la distanza percorsa dalla luce nel
+            vuoto durante un intervallo di tempo pari a
+          </p>
+          <div class="equation">1 / 299 792 458 di secondo</div>
+          <p>
+            La definizione del metro non richiede più un campione materiale
+            della lunghezza: una volta realizzato il secondo, la relazione tra
+            tempo e velocità della luce permette di realizzare il metro.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 16 ================= -->
+      <section class="chapter" data-year="2019">
+        <p class="chapter__eyebrow">Capitolo 16</p>
+        <h2>Le sette unità e le costanti fondamentali</h2>
+        <p style="text-align: justify">
+          La trasformazione compiuta con il metro non rimase un caso isolato.
+          Nel corso del Novecento, il progresso della fisica sperimentale rese
+          possibile individuare riferimenti naturali sempre più stabili e
+          riproducibili anche per le altre grandezze fondamentali. Il problema
+          della metrologia non era più soltanto quello di costruire campioni
+          migliori, ma quello di definire le unità in modo da non dipendere da
+          particolari oggetti, luoghi o condizioni sperimentali.
+        </p>
+        <p style="text-align: justify">
+          Il passaggio decisivo avvenne nel 2019, quando entrò in vigore la
+          nuova formulazione del Sistema Internazionale di Unità di Misura. Le
+          sette unità fondamentali continuarono a costituire la base del Sistema
+          Internazionale, ma la loro definizione venne ricondotta a valori
+          numerici fissati esattamente di sette costanti fondamentali della
+          natura.
+        </p>
+        <p style="text-align: justify">
+          La scelta delle costanti non fu casuale. La velocità della luce nel
+          vuoto entra nella definizione del metro; la frequenza della
+          transizione iperfine del cesio‑133 in quella del secondo; la costante
+          di Planck in quella del chilogrammo; la carica elementare in quella
+          dell'ampere; la costante di Boltzmann in quella del kelvin; la
+          costante di Avogadro in quella della mole; l'efficacia luminosa di una
+          radiazione monocromatica di frequenza fissata in quella della candela.
+        </p>
+        <p style="text-align: justify">
+          Il significato di questa trasformazione è profondo. Le unità non sono
+          più rappresentate da oggetti che devono essere conservati e protetti,
+          né dipendono dalla disponibilità di un particolare campione materiale.
+          La loro definizione è incorporata nella struttura del Sistema
+          Internazionale e collegata a proprietà fondamentali della natura. Le
+          realizzazioni pratiche possono cambiare con il progresso della
+          tecnologia, mentre la definizione dell'unità rimane invariata.
+        </p>
+
+        <div class="box">
+          <h3>Le sette unità di base del Sistema Internazionale</h3>
+          <p style="text-align: justify">
+            Nel Sistema Internazionale (SI), le sette unità di base sono
+            definite attraverso valori numerici fissati esattamente di sette
+            costanti della natura. Le loro realizzazioni pratiche possono essere
+            ottenute attraverso esperimenti e strumenti diversi, ma la
+            definizione delle unità rimane invariata.
+          </p>
+          <ul class="constants">
+            <li>
+              <strong>Secondo (s)</strong>Fissa il valore della frequenza della
+              transizione iperfine dello stato fondamentale dell'atomo di
+              cesio‑133.<span class="val"
+                >&Delta;&nu;<sub>Cs</sub> = 9 192 631 770 Hz</span
+              >
+            </li>
+            <li>
+              <strong>Metro (m)</strong>Fissa il valore della velocità della
+              luce nel vuoto.<span class="val"
+                >c = 299 792 458 m·s<sup>&minus;1</sup></span
+              >
+            </li>
+            <li>
+              <strong>Chilogrammo (kg)</strong>Fissa il valore della costante di
+              Planck.<span class="val"
+                >h = 6,626 070 15 &times; 10<sup>&minus;34</sup> J·s</span
+              >
+            </li>
+            <li>
+              <strong>Ampere (A)</strong>Fissa il valore della carica
+              elementare.<span class="val"
+                >e = 1,602 176 634 &times; 10<sup>&minus;19</sup> C</span
+              >
+            </li>
+            <li>
+              <strong>Kelvin (K)</strong>Fissa il valore della costante di
+              Boltzmann.<span class="val"
+                >k = 1,380 649 &times; 10<sup>&minus;23</sup> J·K<sup
+                  >&minus;1</sup
+                ></span
+              >
+            </li>
+            <li>
+              <strong>Mole (mol)</strong>Fissa il valore della costante di
+              Avogadro.<span class="val"
+                >N<sub>A</sub> = 6,022 140 76 &times; 10<sup>23</sup> mol<sup
+                  >&minus;1</sup
+                ></span
+              >
+            </li>
+            <li>
+              <strong>Candela (cd)</strong>Fissa l'efficacia luminosa di una
+              radiazione monocromatica di frequenza 540&times;10<sup>12</sup>
+              Hz.<span class="val"
+                >K<sub>cd</sub> = 683 lm·W<sup>&minus;1</sup></span
+              >
+            </li>
+          </ul>
+          <p style="text-align: justify; margin-top: 1.1rem">
+            Queste sette definizioni costituiscono la base del Sistema
+            Internazionale. Le unità derivate del SI possono essere espresse in
+            funzione delle sette unità di base attraverso relazioni matematiche.
+            Il SI moderno non richiede quindi un insieme di campioni materiali
+            indipendenti: le unità sono definite attraverso costanti con valori
+            numerici fissati esattamente e possono essere realizzate attraverso
+            procedimenti sperimentali sempre più precisi.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= 17 ================= -->
+      <section class="chapter">
+        <p class="chapter__eyebrow">Capitolo 17</p>
+        <h2>Il significato scientifico della misura</h2>
+        <p style="text-align: justify">
+          In senso scientifico, misurare significa confrontare una grandezza con
+          un riferimento della stessa natura, scelto per esprimerne
+          quantitativamente il valore. Il risultato di questo confronto è
+          espresso mediante un numero accompagnato dalla relativa unità di
+          misura. Un numero, infatti, non possiede alcun significato fisico se
+          non è associato all'unità che ne specifica il valore.
+        </p>
+        <p style="text-align: justify">
+          Ogni misura è, prima di tutto, un atto di comunicazione. Perché una
+          misura sia utile, infatti, non basta ottenere un numero: è necessario
+          che chi la utilizza possa comprenderne il significato nello stesso
+          modo. Da questa semplice esigenza si è sviluppata la lunga storia
+          delle unità di misura.
+        </p>
+        <p style="text-align: justify">
+          Dalle antiche misure basate sul corpo umano fino alle moderne
+          definizioni fondate sulle costanti fondamentali della fisica, la
+          storia delle unità di misura è la storia della continua ricerca di un
+          linguaggio universale. Un linguaggio che oggi permette a laboratori,
+          industrie e agenzie spaziali di tutto il mondo di collaborare
+          utilizzando gli stessi riferimenti.
+        </p>
+
+        <div class="box" style="text-align: justify">
+          <p style="margin: 0">
+            Immaginiamo di leggere semplicemente <strong>25</strong>. Che cosa
+            rappresenta questo numero? Venticinque metri? Venticinque
+            chilogrammi? Venticinque secondi? Senza un'unità di misura, il
+            numero non ci dice quale grandezza fisica stiamo considerando. È
+            l'unità che permette di interpretare il valore numerico e di
+            renderlo comprensibile e confrontabile.
+          </p>
+        </div>
+
+        <p style="text-align: justify">
+          La possibilità di esprimere una misura in modo univoco costituisce il
+          fondamento di ogni attività scientifica e tecnologica. Quando due
+          persone effettuano la stessa misura, oppure quando laboratori situati
+          in parti diverse del mondo confrontano i risultati dei propri
+          esperimenti, devono poter essere certi che i numeri utilizzati abbiano
+          lo stesso significato e siano riferiti agli stessi standard.
+        </p>
+        <p style="text-align: justify">
+          Le unità di misura diventano così un vero e proprio linguaggio
+          universale: un sistema condiviso che permette di confrontare
+          osservazioni, riprodurre esperimenti e coordinare attività
+          scientifiche e tecnologiche anche a grande distanza.
+        </p>
+        <p style="text-align: justify">
+          Ma un linguaggio comune funziona soltanto se le sue regole vengono
+          utilizzate nello stesso modo. Un numero può essere corretto e, allo
+          stesso tempo, essere interpretato erroneamente se chi lo riceve
+          attribuisce alla misura un significato diverso da quello previsto da
+          chi l'ha prodotta.
+        </p>
+        <p style="text-align: justify">
+          La storia della misura non riguarda quindi soltanto la ricerca di
+          unità sempre più precise e universali. Riguarda anche la necessità di
+          trasmettere correttamente le informazioni che quelle unità permettono
+          di esprimere.
+        </p>
+      </section>
+
+      <!-- ================= 18 ================= -->
+      <section class="chapter">
+        <div class="box box--incident">
+          <h3>
+            Un numero, due significati — La storia del
+            <em>Mars Climate Orbiter</em>
+          </h3>
+          <p style="text-align: justify">
+            Il <em>Mars Climate Orbiter</em>, una sonda progettata per studiare
+            l'atmosfera e il clima di Marte, fu lanciato l'11 dicembre 1998.
+            Dopo un viaggio verso Marte durato circa nove mesi e mezzo, la sonda
+            iniziò le manovre per inserirsi nell'orbita marziana. Pochi minuti
+            prima del previsto inserimento orbitale, tuttavia, ogni contatto con
+            il veicolo spaziale venne definitivamente perso. La commissione
+            d'inchiesta stabilì che la causa fondamentale della perdita della
+            sonda era legata a un'incompatibilità nell'utilizzo delle unità di
+            misura. Il software sviluppato dalla società Lockheed Martin forniva
+            infatti alcuni dati relativi ai propulsori utilizzando unità del
+            sistema anglosassone, mentre il software utilizzato dal team di
+            navigazione della NASA interpretava quegli stessi dati come se
+            fossero espressi nelle unità del Sistema Internazionale. La
+            conseguenza fu un errore nella determinazione della traiettoria. Il
+            <em>Mars Climate Orbiter</em> passò molto più vicino alla superficie
+            marziana di quanto previsto e la missione si concluse con la perdita
+            del veicolo spaziale, costato circa 125 milioni di dollari. Non era
+            quindi necessario che qualcuno sbagliasse una misura. Bastava che
+            due sistemi attribuissero un significato diverso allo stesso numero.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= EPILOGO ================= -->
+      <section class="chapter">
+        <h2>Epilogo</h2>
+        <p style="text-align: justify">
+          La storia delle unità di misura racconta anche una parte della storia
+          della scienza. Misurare non significa soltanto attribuire un numero a
+          una grandezza: significa stabilire un riferimento comune, definire
+          come possa essere riprodotto e garantire che quel riferimento rimanga
+          valido per tutti. La metrologia moderna porta questa idea alle sue
+          estreme conseguenze: le unità sono convenzioni condivise dalla
+          comunità internazionale, ma le loro definizioni si fondano oggi su
+          proprietà fondamentali della natura.
+        </p>
+        <p class="pull" style="text-align: justify">
+          Dal corpo umano al campione materiale, dal campione materiale ai
+          fenomeni naturali, dai fenomeni naturali alle costanti fondamentali
+          della natura.
+        </p>
+        <p style="text-align: justify">
+          Ad ogni passaggio il riferimento diventa meno locale, meno dipendente
+          da particolari oggetti o condizioni e più universale. L'uomo, partito
+          da se stesso, è arrivato a definire le proprie unità attraverso
+          proprietà della natura che non dipendono da un particolare luogo, da
+          un particolare oggetto o da una particolare persona. Questa evoluzione
+          rappresenta una delle grandi conquiste della metrologia: le unità di
+          misura possono oggi essere realizzate attraverso riferimenti sempre
+          più stabili, universali e riproducibili.
+        </p>
+      </section>
+
+      <!-- ================= GLOSSARIO ================= -->
+      <section class="chapter">
+        <h2>Glossario</h2>
+        <dl class="glossary">
+          <dt>Campione</dt>
+          <dd>
+            Oggetto, fenomeno fisico, materiale o sistema di misura destinato a
+            realizzare, conservare o riprodurre un'unità di misura e a fungere
+            da riferimento per effettuare e confrontare le misure.
+          </dd>
+          <dt>Costante fondamentale</dt>
+          <dd>
+            Grandezza fisica caratterizzata da un valore universale,
+            indipendente dal tempo, dallo spazio e dalle condizioni
+            sperimentali. Nel Sistema Internazionale, il valore numerico di
+            sette costanti fondamentali è fissato esattamente e viene utilizzato
+            per definire le unità di misura.
+          </dd>
+          <dt>Grandezza fisica</dt>
+          <dd>
+            Proprietà di un fenomeno, di un corpo o di una sostanza che può
+            essere espressa quantitativamente mediante un valore numerico e
+            un'unità di misura.
+          </dd>
+
+          <dt>Metrologia</dt>
+          <dd>
+            Scienza della misurazione, comprendente i principi, i metodi e gli
+            strumenti utilizzati per effettuare e confrontare le misure.
+          </dd>
+
+          <dt>Misura indiretta</dt>
+          <dd>
+            Determinazione del valore di una grandezza attraverso la misura di
+            altre grandezze e una relazione nota tra esse.
+          </dd>
+
+          <dt>Precisione</dt>
+          <dd>
+            Capacità di una procedura di misura di fornire risultati molto
+            vicini tra loro quando la stessa grandezza viene misurata
+            ripetutamente.
+          </dd>
+
+          <dt>Riproducibilità</dt>
+          <dd>
+            Grado di concordanza tra i risultati di misure della stessa
+            grandezza eseguite cambiando le condizioni di misura, come
+            operatore, strumento, laboratorio, metodo o tempo.
+          </dd>
+
+          <dt>Triangolazione</dt>
+          <dd>
+            Metodo geometrico che permette di determinare indirettamente
+            distanze attraverso una rete di triangoli, utilizzando una lunghezza
+            di base e misure angolari.
+          </dd>
+          <dt>Unità di misura</dt>
+          <dd>
+            Quantità convenzionale e definita utilizzata come riferimento per
+            esprimere il valore di una grandezza fisica.
+          </dd>
+        </dl>
+      </section>
+
+      <!-- ================= APPENDICI ================= -->
+      <section class="chapter">
+        <h2>Fonti e approfondimenti</h2>
+
+        <details class="appendix">
+          <summary>Bibliografia</summary>
+          <div class="inner">
+            <ol>
+              <li>
+                Kula, Witold,
+                <em>Le misure e gli uomini dall'antichità ad oggi</em>, Laterza,
+                Bari, 1987.
+              </li>
+              <li>
+                Alder, Ken,
+                <em
+                  >La misura di tutte le cose. L'incredibile storia
+                  dell'invenzione del metro</em
+                >, Rizzoli, Milano, 2002.
+              </li>
+              <li>
+                Crease, Robert P.,
+                <em
+                  >World in the Balance: The Historic Quest for an Absolute
+                  System of Measurement</em
+                >, W. W. Norton &amp; Company, New York, 2011.
+              </li>
+              <li>
+                Vincent, James,
+                <em
+                  >Beyond Measure: The Hidden History of Measurement from
+                  Everything to Nothing</em
+                >, Faber &amp; Faber, London, 2022.
+              </li>
+              <li>
+                Barrow, John D.,
+                <em
+                  >I numeri dell'universo. Le costanti di natura e la teoria del
+                  tutto</em
+                >, Mondadori, 2004, cap. 2.
+              </li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="appendix">
+          <summary>Fonti e risorse online</summary>
+
+          <div class="inner">
+            <ol>
+              <li>
+                National Institute of Standards and Technology (NIST),
+                <em>Meter</em>.<br /><a
+                  href="https://www.nist.gov/si-redefinition/meter"
+                  target="_blank"
+                  rel="noopener"
+                  >nist.gov/si-redefinition/meter</a
+                >
+              </li>
+              <li>
+                Bibliothèque nationale de France (BnF), Gallica,
+                <em
+                  >Base du système métrique décimal, ou Mesure de l'arc du
+                  méridien compris entre les parallèles de Dunkerque et
+                  Barcelone</em
+                >, Jean‑Baptiste Delambre e Pierre Méchain.<br /><a
+                  href="https://gallica.bnf.fr/ark:/12148/bpt6k110604s"
+                  target="_blank"
+                  rel="noopener"
+                  >gallica.bnf.fr/ark:/12148/bpt6k110604s</a
+                >
+              </li>
+
+              <li>
+                Bureau International des Poids et Mesures (BIPM),
+                <em>The International System of Units (SI)</em> e
+                <em>SI Brochure</em>.<br />
+                <a
+                  href="https://www.bipm.org/en/measurement-units"
+                  target="_blank"
+                  rel="noopener"
+                  >bipm.org/en/measurement-units</a
+                ><br />
+                <a
+                  href="https://www.bipm.org/en/publications/si-brochure"
+                  target="_blank"
+                  rel="noopener"
+                  >bipm.org/en/publications/si-brochure</a
+                >
+              </li>
+            </ol>
+          </div>
+        </details>
+
+        <details class="appendix">
+          <summary>Crediti delle immagini</summary>
+          <div class="inner">
+            <div class="credit-entry">
+              <h4>IMG-01 — Poids et mesures, 1929</h4>
+              <dl>
+                <dt>Titolo</dt>
+                <dd>
+                  <em>
+                    Poids et mesures. Tableau dressé conformément à la loi du 11
+                    juillet et au décret du 28 juillet 1903
+                  </em>
+                </dd>
+
+                <dt>Data</dt>
+                <dd>1929</dd>
+
+                <dt>Autore/Editore</dt>
+                <dd>Éditions Forest</dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://gallica.bnf.fr/ark:/12148/btv1b53066549q/f1.item.double.item.zoom.item"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Bibliothèque nationale de France (BnF), Gallica
+                  </a>
+                </dd>
+
+                <dt>Riproduzione</dt>
+                <dd>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Poids_et_mesures_-_Tableau_dress%C3%A9_conform%C3%A9ment_%C3%A0_la_loi_du_11_juillet_et_au_d%C3%A9cret_du_28_juillet_1903.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Wikimedia Commons
+                  </a>
+                </dd>
+
+                <dt>Licenza</dt>
+                <dd>Pubblico dominio</dd>
+              </dl>
+            </div>
+
+            <div class="credit-entry">
+              <h4>IMG-02 — Uomo Vitruviano</h4>
+              <dl>
+                <dt>Opera</dt>
+                <dd><em>Uomo Vitruviano</em></dd>
+
+                <dt>Autore</dt>
+                <dd>Leonardo da Vinci (1452–1519)</dd>
+
+                <dt>Data</dt>
+                <dd>ca. 1490</dd>
+
+                <dt>Conservazione</dt>
+                <dd>Gallerie dell'Accademia, Venezia</dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://brunelleschi.imss.fi.it/stampa_leonardo/pages/uomo_vitruviano_accademia_venezia.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Istituto e Museo di Storia della Scienza (IMSS), Firenze
+                  </a>
+                </dd>
+
+                <dt>Riproduzione</dt>
+                <dd>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Uomo_Vitruviano.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Wikimedia Commons
+                  </a>
+                </dd>
+
+                <dt>Licenza</dt>
+                <dd>Pubblico dominio</dd>
+              </dl>
+            </div>
+
+            <div class="credit-entry">
+              <h4>IMG-03 — Unità di misura del Palazzo della Ragione</h4>
+              <dl>
+                <dt>Opera</dt>
+                <dd>
+                  <em>Unità di misura - Palazzo della Ragione - Padova</em>
+                </dd>
+
+                <dt>Data</dt>
+                <dd>27 maggio 2012</dd>
+
+                <dt>Autore</dt>
+                <dd>Fabrizio Pivari</dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Unit%C3%A0_di_misura_-_Palazzo_della_Ragione_-_Padova.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Wikimedia Commons
+                  </a>
+                </dd>
+
+                <dt>Licenza</dt>
+                <dd>CC BY-SA 3.0</dd>
+              </dl>
+            </div>
+
+            <div class="credit-entry">
+              <h4>IMG-04 — Déclaration des droits de l'homme et du citoyen</h4>
+              <dl>
+                <dt>Opera</dt>
+                <dd>
+                  <em>Déclaration des droits de l'homme et du citoyen</em>
+                </dd>
+
+                <dt>Autore</dt>
+                <dd>Jean-Jacques-François Le Barbier (1738–1826)</dd>
+
+                <dt>Data</dt>
+                <dd>ca. 1789</dd>
+
+                <dt>Tecnica</dt>
+                <dd>Olio su tavola</dd>
+
+                <dt>Dimensioni</dt>
+                <dd>71 × 56 cm</dd>
+
+                <dt>Conservazione</dt>
+                <dd>Musée Carnavalet, Paris, inv. P809</dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="http://parismuseescollections.paris.fr/fr/node/152612"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Paris Musées Collections
+                  </a>
+                </dd>
+
+                <dt>Riproduzione</dt>
+                <dd>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Declaration_of_the_Rights_of_Man_and_of_the_Citizen_in_1789.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Wikimedia Commons
+                  </a>
+                </dd>
+
+                <dt>Licenza</dt>
+                <dd>Pubblico dominio</dd>
+              </dl>
+            </div>
+            <div class="credit-entry">
+              <h4>IMG-05 — Tavole della triangolazione Dunkerque–Barcellona</h4>
+              <dl>
+                <dt>Opera</dt>
+                <dd>
+                  <em>
+                    Base du système métrique décimal, ou Mesure de l'arc du
+                    méridien compris entre les parallèles de Dunkerque et
+                    Barcelone </em
+                  >, T. 1
+                </dd>
+
+                <dt>Autori</dt>
+                <dd>
+                  Jean-Baptiste Delambre (1749–1822) e Pierre Méchain
+                  (1744–1804)
+                </dd>
+
+                <dt>Editore</dt>
+                <dd>Baudouin, Paris</dd>
+
+                <dt>Data edizione</dt>
+                <dd>1806–1810</dd>
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://gallica.bnf.fr/ark:/12148/bpt6k110604s/f2.planchecontact"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Bibliothèque nationale de France, Gallica</a
+                  >
+                </dd>
+
+                <dt>Segnatura</dt>
+                <dd>BnF, département Réserve des livres rares, V-7584</dd>
+
+                <dt>Tavole utilizzate</dt>
+                <dd>IV, VI, VII e VIII</dd>
+
+                <dt>Diritti</dt>
+                <dd>Pubblico dominio</dd>
+              </dl>
+            </div>
+
+            <div class="credit-entry">
+              <h4>IMG-06 — Campioni metrici storici del Rijksmuseum</h4>
+              <dl>
+                <dt>Opera</dt>
+                <dd>
+                  <em>Metric standards</em>, riproduzioni storiche olandesi dei
+                  campioni metrici
+                </dd>
+                <dt>Oggetti</dt>
+                <dd>
+                  metro campione in ferro con custodia (1799); chilogrammo
+                  campione in rame con custodia (1798); campioni di volume in
+                  rame (1829)
+                </dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:Metric_standards_Rijksmuseum.jpg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wikimedia Commons</a
+                  >
+                </dd>
+
+                <dt>Licenza</dt>
+                <dd>CC BY-SA 4.0</dd>
+              </dl>
+            </div>
+
+            <div class="credit-entry">
+              <h4>IMG-07 — Usage des Nouvelles Mesures, 1800</h4>
+              <dl>
+                <dt>Opera</dt>
+                <dd><em>Usages des Nouvelles Mesures</em></dd>
+
+                <dt>Tipologia</dt>
+                <dd>Incisione in maniera di lavis</dd>
+
+                <dt>Autore</dt>
+                <dd>
+                  L. F. Labrousse, incisore; J. P. Delion, autore del modello
+                </dd>
+
+                <dt>Data</dt>
+                <dd>1800</dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://gallica.bnf.fr/ark:/12148/btv1b8412951c"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Bibliothèque nationale de France, Gallica</a
+                  >
+                </dd>
+
+                <dt>Licenza</dt>
+                <dd>Pubblico dominio</dd>
+              </dl>
+            </div>
+
+            <div class="credit-entry">
+              <h4>IMG-08 — Prototipo nazionale del metro n. 27</h4>
+              <dl>
+                <dt>Oggetto</dt>
+                <dd>National Prototype Meter Bar No. 27</dd>
+
+                <dt>Tipologia</dt>
+                <dd>Campione nazionale del metro</dd>
+
+                <dt>Realizzazione</dt>
+                <dd>
+                  Bureau international des poids et mesures (BIPM), Sèvres
+                </dd>
+
+                <dt>Data</dt>
+                <dd>1889</dd>
+
+                <dt>Fonte</dt>
+                <dd>
+                  <a
+                    href="https://commons.wikimedia.org/wiki/File:US_National_Length_Meter.JPG"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Wikimedia Commons — “US National Length Meter.JPG”</a
+                  >
+                </dd>
+
+                <dt>Riferimento</dt>
+                <dd>NIST Virtual Museum, Object ID 37</dd>
+
+                <dt>Licenza</dt>
+                <dd>Pubblico dominio</dd>
+              </dl>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-bottom">
+          <span>
+            Misurare il mondo: dal meridiano terrestre alle costanti della
+            natura
+          </span>
+        </div>
+
+        <div class="footer-credit">
+          <span>© 2026 Nicola Cusanelli</span>
+          <span>·</span>
+          <a href="../index.html">Atlante delle scienze</a>
+          <span>·</span>
+          <a href="physics.html">Fisica</a>
+          <span>·</span>
+          <a
+            href="https://creativecommons.org/licenses/by-nc/4.0/deed.it"
+            target="_blank"
+            rel="noopener"
+          >
+            CC BY-NC 4.0
+          </a>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      (function () {
+        var fill = document.getElementById("progressFill");
+        var rulerFill = document.getElementById("rulerFill");
+        var ruler = document.querySelector(".ruler");
+        var ticks = ruler
+          ? Array.prototype.slice.call(ruler.querySelectorAll(".ruler__tick"))
+          : [];
+        var sections = Array.prototype.slice.call(
+          document.querySelectorAll(".chapter[data-year]"),
+        );
+
+        function onScroll() {
+          var doc = document.documentElement;
+          var scrollTop = window.scrollY || doc.scrollTop;
+          var height = doc.scrollHeight - doc.clientHeight;
+          var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+          if (fill) fill.style.width = pct + "%";
+          if (rulerFill) rulerFill.style.height = Math.min(pct, 100) + "%";
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+
+        if ("IntersectionObserver" in window && sections.length) {
+          var obs = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  var year = entry.target.getAttribute("data-year");
+                  ticks.forEach(function (t) {
+                    t.classList.toggle(
+                      "is-active",
+                      t.getAttribute("data-year") === year,
+                    );
+                  });
+                }
+              });
+            },
+            { rootMargin: "-40% 0px -55% 0px", threshold: 0 },
+          );
+          sections.forEach(function (s) {
+            obs.observe(s);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>
